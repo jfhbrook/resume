@@ -8,14 +8,19 @@
 \newcommand{\phone}[1]{\def\phonenumber{#1}}
 \newcommand{\email}[1]{\def\emailaddress{#1}}
 
+\renewcommand{\section}[1]{\bigskip\Large\textbf{\underline{\textit{#1}}}\normalsize\\} %breaks section, section
+
+%For squishing
+\pagestyle{empty}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0cm}
+
 \author{Joshua Holbrook}
 \address{736b 9th Avenue  Fairbanks AK 99771}
 \phone{(907)841-9238}
 \email{josh.holbrook@gmail.com}
 
-\pagestyle{empty}
-\setlength{\parindent}{0cm}
-\setlength{\parskip}{0cm}
+
 
 \begin{document}
 
@@ -23,14 +28,16 @@
 \smallskip\small \theaddress -- \phonenumber -- \emailaddress \normalsize
 
 %I'm terrible at writing these. TERRIBLE.
-\section*{\underline{\textit{Objective:}}}
+\section{Objective:}
+
 %PROBABLY not the wording I want, but the idea is that any job I get should be interesting, and that I should also be able to have something to show for it.
 %I think that's somewhat important to me when it comes to a career, at least.
 \small To get an opportunity to use the skills I've gathered during my academic career,
 with a particular interest in computational and design aspects of mechanical
 engineering.\normalsize
 
-\section*{\underline{\textit{Skills and Qualifications:}}}
+
+\section{Skills and Qualifications:}
 \small\begin{itemize}
 \item Experience with spreadsheet software, MATLAB and python/scipy
 \item Certified LabVIEW Associate Developer
@@ -42,12 +49,13 @@ engineering.\normalsize
 %\emph{Completed 116 Credit Hours}\\
 %\emph{3.67 Current GPA (expected)}
 
-\section*{\underline{\textit{Education:}}}
+\section{Education:}
+
 \large\textit{Bachelor of Science, Mechanical Engineering\hfill August 2005 -- May 2010}\normalsize \\
 \textit{Minor in Mathematics}\\
 University of Alaska Fairbanks\\
-\emph{Completed 143 Credit Hours}\\
-\emph{3.66 GPA (expected)}
+\textit{Completed 143 Credit Hours}\\
+\textit{3.66 GPA (expected)}
 
 \begin{comment}
 Suggested by Lisa's dad, but not by Career Services.
@@ -76,7 +84,7 @@ Chapter\hfill2009}\normalsize\\
 \textit{Treasurer}
 \end{comment}
 
-\section*{\underline{\textit{Employment History:}}}
+\section{Employment History:}
 
 \large\textit{Research Assistant \hfill January 2010 --Present}\normalsize \\
 UAF Institute of Northern Engineering, Fairbanks, AK\\
