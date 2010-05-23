@@ -1,15 +1,26 @@
 \documentclass[10pt, letterpaper]{article}
 \usepackage[top=1in,left=1in,right=1in,bottom=1in,nohead,nofoot]{geometry}
-\usepackage{mdwlist}
-\title{Resume}
+\usepackage{mdwlist}%Squishing bulleted lists
+\usepackage{verbatim}%for the comment environment
+
+\renewcommand{\author}[1]{\def\theauthor{#1}} %Breaks \maketitle.
+\newcommand{\address}[1]{\def\theaddress{#1}}
+\newcommand{\phone}[1]{\def\phonenumber{#1}}
+\newcommand{\email}[1]{\def\emailaddress{#1}}
+
 \author{Joshua Holbrook}
+\address{736b 9th Avenue  Fairbanks AK 99771}
+\phone{(907)841-9238}
+\email{josh.holbrook@gmail.com}
+
 \pagestyle{empty}
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{0cm}
+
 \begin{document}
 
-\textbf{\Huge{Joshua Holbrook}}\hrule
-\smallskip\small 736b 9th Avenue  Fairbanks AK 99771 -- (907)841-9238 -- josh.holbrook@gmail.com \normalsize
+\textbf{\Huge \theauthor }\hrule
+\smallskip\small \theaddress -- \phonenumber -- \emailaddress \normalsize
 
 %I'm terrible at writing these. TERRIBLE.
 \section*{\underline{\textit{Objective:}}}
@@ -21,40 +32,49 @@ engineering.\normalsize
 
 \section*{\underline{\textit{Skills and Qualifications:}}}
 \small\begin{itemize}
-%\item Extensive experience with spreadsheet software such as Microsoft Excel 
 \item Experience with spreadsheet software, MATLAB and python/scipy
 \item Certified LabVIEW Associate Developer
 \item Comprehensive understanding of basic engineering principles
 \end{itemize}\normalsize
 
+%\large\textit{Master of Science, Mechanical Engineering\hfill September 2009 -- December 2010 (expected)}\normalsize \\
+%University of Alaska Fairbanks\\
+%\emph{Completed 116 Credit Hours}\\
+%\emph{3.67 Current GPA (expected)}
+
 \section*{\underline{\textit{Education:}}}
-\large\textit{Bachelor of Science, Mechanical Engineering\hfill August 2005 --
-May 2010 (Expected)}\normalsize \\
+\large\textit{Bachelor of Science, Mechanical Engineering\hfill August 2005 -- May 2010}\normalsize \\
 \textit{Minor in Mathematics}\\
 University of Alaska Fairbanks\\
-\emph{Completed 116 Credit Hours}\\
-\emph{3.67 Current GPA}
+\emph{Completed 143 Credit Hours}\\
+\emph{3.66 GPA (expected)}
 
-%Suggested by Lisa's dad, but not by those bitches at Career Services.
-%\large\textit{High School Diploma \hfill May 2005}\normalsize \\
-%Susitna Valley Junior Senior High School\\
-%\emph{Graduated with a 3.73 GPA}
+\begin{comment}
+Suggested by Lisa's dad, but not by Career Services.
+I think this is largely irrelevant due to my possession of a bachelors degree.
+\large\textit{High School Diploma \hfill May 2005}\normalsize \\
+Susitna Valley Junior Senior High School\\
+\emph{Graduated with a 3.73 GPA}
 
-%New section, trying it out
-%Currently canning this section but THAT'S OKAY
-%\section*{\underline{\textit{Projects:}}}
-%\large\textit{Super Four-Bar Explorer \hfill December 2008}\normalsize
-%\small\begin{itemize}
-%\item A program written in python that uses a Gauss-Newton unconstrained optimization algorithm to fit the path traced by a four bar linkage to a given set of points
-%\item Accompanied by a spreadsheet that illustrates four-bar linkage traced paths
-%\end{itemize}\normalsize\medskip
+New section, trying it out
+Currently canning this section but THAT'S OKAY
+\section*{\underline{\textit{Projects:}}}
+\large\textit{Super Four-Bar Explorer \hfill December 2008}\normalsize
+\small\begin{itemize}
+\item A program written in python that uses a Gauss-Newton unconstrained optimization algorithm to fit the path traced by a four bar linkage to a given set of points
+\item Accompanied by a spreadsheet that illustrates four-bar linkage traced paths
+\end{itemize}\normalsize\medskip
 
-%Another new section, recommended by Career Services. At worst, I have the
-%wording for it, amirite?
-%\section*{\underline{\textit{Service:}}}
-%\large\textit{Society of Automotive Engineers, UAF
-%Chapter\hfill2009}\normalsize\\
-%\textit{Treasurer}
+Another new section, recommended by Career Services. At worst, I have the
+wording for it, amirite?
+\section*{\underline{\textit{Service:}}}
+
+ASME's web site, E-week volunteer
+
+\large\textit{Society of Automotive Engineers, UAF
+Chapter\hfill2009}\normalsize\\
+\textit{Treasurer}
+\end{comment}
 
 \section*{\underline{\textit{Employment History:}}}
 
@@ -83,8 +103,6 @@ Job duties included:
 \item Grading and correcting homework assignments for ES 331, "Mechanics of Materials"
 \end{itemize}\normalsize\medskip
 
-%Something needed to go. Not only is this probably not relevant to engineering,
-%but I'd also get a bad review. C'est la vie.
 \large\textit{Painter	\hfill May 2008 -- August 2008}\normalsize\\
 UAF Conference Services, Fairbanks, AK\\
 Job duties included:
@@ -99,7 +117,7 @@ Job duties included:
 %\item Sanding and polishing solid surface 
 %\item Material stocking and staging
 %\end{itemize}\normalsize\medskip
-%
+
 \large\textit{Laboratory Assistant \hfill February 2007 -- May 2007}\normalsize \\
 UAF Water and Environmental Research Center, Fairbanks, AK\\
 Job duties included:
@@ -107,7 +125,7 @@ Job duties included:
 \item Taking inventory of chemical stock
 \item Tabulating, manipulating and organizing test data in Excel
 \end{itemize}\normalsize\medskip
-%
+
 %Of Low Importance; Currently commented out to fit on one page
 %\large\textit{Porter \hfill May 2006 -- August 2006}\normalsize \\
 %Aramark, Denali National Park, AK\\
