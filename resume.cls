@@ -18,43 +18,13 @@
 \RequirePackage{ifthen}
 \RequirePackage{url}
 \RequirePackage{tabularx}
-\RequirePackage{pgf}
-\RequirePackage{pgfshade}
-\RequirePackage{xxcolor}
-
-%\RequirePackage{times}
-%\RequirePackage[T1]{fontenc}
 
 \RequirePackage[tmargin=0.75in,bmargin=0.75in,lmargin=0.875in,rmargin=0.875in]{geometry}
-
-\definecolor{rulestartcolor}{rgb}{0,0,0}
-\definecolor{ruleendcolor}{rgb}{0.4,0.4,0.4}
 
 \newlength{\headerbuffer}
 \setlength{\headerbuffer}{3pt}
 \newlength{\secskip}
 \setlength{\secskip}{10pt}
-
-\newlength{\@headerscratch}
-
-% Usage: \@setupshading{width}{height}{start}{end}
-\newcommand{\@setupshading}[4]{%
-  \pgfdeclarehorizontalshading{@ruleshading}{#2}{%
-    color(0pt)=(#3); color(#1)=(#4)%
-  }
-}
-
-\newcommand{\pgfrule}[4]{%
-  \begin{pgfpicture}{0pt}{0pt}{#1}{#2}%
-    \pgfdeclarehorizontalshading{@ruleshading}{#2}{%
-      color(0pt)=(#3); color(#1)=(#4)%
-    }
-    \pgfputat{\pgfxy(0,0)}{\pgfbox[left,bottom]{\pgfuseshading{@ruleshading}}}
-  \end{pgfpicture}%
-}
-
-\newcommand{\lrule}[2]{\pgfrule{#1}{#2}{rulestartcolor}{ruleendcolor}}
-\newcommand{\rrule}[2]{\pgfrule{#1}{#2}{ruleendcolor}{rulestartcolor}}
 
 \newcommand{\@authorname}{}
 \newcommand{\@email}{}
