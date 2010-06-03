@@ -1,14 +1,14 @@
-\documentclass[10pt, letterpaper]{article}
-\usepackage[top=1in,left=1in,right=1in,bottom=1in,nohead,nofoot]{geometry}
-\usepackage{mdwlist}%Squishing bulleted lists
+\documentclass[10pt, letterpaper]{resume}
+%\usepackage[top=1in,left=1in,right=1in,bottom=1in,nohead,nofoot]{geometry}
+\usepackage{paralist}%Squishing bulleted lists
 \usepackage{verbatim}%for the comment environment
 
-\renewcommand{\author}[1]{\def\theauthor{#1}} %Breaks \maketitle.
-\newcommand{\address}[1]{\def\theaddress{#1}}
-\newcommand{\phone}[1]{\def\phonenumber{#1}}
-\newcommand{\email}[1]{\def\emailaddress{#1}}
+%\renewcommand{\author}[1]{\def\theauthor{#1}} %Breaks \maketitle.
+%\newcommand{\address}[1]{\def\theaddress{#1}}
+%\newcommand{\phone}[1]{\def\phonenumber{#1}}
+%\newcommand{\email}[1]{\def\emailaddress{#1}}
 
-\renewcommand{\section}[1]{\bigskip\Large\textbf{\underline{\textit{#1}}}\normalsize\\} %breaks section, section
+%\renewcommand{\section}[1]{\bigskip\Large\textbf{\underline{\textit{#1}}}\normalsize\\} %breaks section, section
 
 %For squishing
 \pagestyle{empty}
@@ -16,16 +16,19 @@
 \setlength{\parskip}{0cm}
 
 \author{Joshua Holbrook}
-\address{736b 9th Avenue  Fairbanks AK 99709}
+\streetaddress{736b 9th Avenue}
+\citystatezip{Fairbanks AK 99709}
 \phone{(907)841-9238}
 \email{josh.holbrook@gmail.com}
+\webpage{http://www.github.com/jesusabdullah}
 
 
 
 \begin{document}
 
-\textbf{\Huge \theauthor }\hrule
-\smallskip\small \theaddress -- \phonenumber -- \emailaddress \normalsize
+%\textbf{\Huge \theauthor }\hrule
+%\smallskip\small \theaddress -- \phonenumber --\emailaddress \normalsize
+\maketitle
 
 %I'm terrible at writing these. TERRIBLE.
 \section{Objective:}
