@@ -1,10 +1,10 @@
 % resume.cls
 %
-%    Copyright 2005 Daniel Burrows
+% Modified from resume.cls found at http://people.debian.org/~dburrows/resume-cls.html, 
+% Copyright 2005 Daniel Burrows.
 %
-% You may use, modify, and redistribute this file in any way you please, so
+% As per the original resume.cls, you may use, modify, and redistribute this file in any way you please, so
 % long as this copyright notice is maintained.
-
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{resume}
@@ -25,7 +25,7 @@
 %\RequirePackage{times}
 %\RequirePackage[T1]{fontenc}
 
-\RequirePackage[tmargin=1in,bmargin=1in]{geometry}
+\RequirePackage[tmargin=0.75in,bmargin=0.75in,lmargin=0.875in,rmargin=0.875in]{geometry}
 
 \definecolor{rulestartcolor}{rgb}{0,0,0}
 \definecolor{ruleendcolor}{rgb}{0.4,0.4,0.4}
@@ -83,10 +83,10 @@
   \par\nointerlineskip\noindent
   \Large{\textbf{\underline{\textit{#1}}}}
   \vspace{\headerbuffer}
-  \par\nointerlineskip\noindent%
-  %\lrule{\linewidth}{0.4pt}%
+  \par\nointerlineskip\noindent
   \vspace{\headerbuffer}
-  \par\nointerlineskip}
+  \par\nointerlineskip
+  \normalsize}
 
 %subsection
 \renewcommand{\subsection}[1]{%
@@ -97,12 +97,14 @@
 %
 %  Usage:
 % \affiliation[title]{institution}{years}
-\newcommand{\affiliation}[3][]{%
-  \goodbreak\vspace{\secskip}\par\noindent\begin{tabularx}{\linewidth}{Xr}%
-    {\bfseries #2} & \textit{#3}%
+\newcommand{\affiliation}[3][]{
+  \goodbreak\par\noindent
+  \hspace{-5pt}\begin{tabularx}{\textwidth}{Xr}
+    \large{\textit{#2}} & \large{\textit{#3}}
     \ifthenelse{\equal{#1}{}}{}{%
-      \\ \textbf{#1}%
+      \\ #1%
     }%
-  \end{tabularx}%
+  \end{tabularx}
+  \par
 }%
 %

@@ -1,17 +1,9 @@
-\documentclass[10pt, letterpaper]{resume}
-%\usepackage[top=1in,left=1in,right=1in,bottom=1in,nohead,nofoot]{geometry}
+\documentclass{resume}
+
 \usepackage{paralist}%Squishing bulleted lists
 \usepackage{verbatim}%for the comment environment
 
-%\renewcommand{\author}[1]{\def\theauthor{#1}} %Breaks \maketitle.
-%\newcommand{\address}[1]{\def\theaddress{#1}}
-%\newcommand{\phone}[1]{\def\phonenumber{#1}}
-%\newcommand{\email}[1]{\def\emailaddress{#1}}
-
-%\renewcommand{\section}[1]{\bigskip\Large\textbf{\underline{\textit{#1}}}\normalsize\\} %breaks section, section
-
-%For squishing
-\pagestyle{empty}
+%Basically sets \noindent throughout
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{0cm}
 
@@ -22,20 +14,14 @@
 \email{josh.holbrook@gmail.com}
 \webpage{http://www.github.com/jesusabdullah}
 
-
-
 \begin{document}
 
-%\textbf{\Huge \theauthor }\hrule
-%\smallskip\small \theaddress -- \phonenumber --\emailaddress \normalsize
 \maketitle
 
 %I'm terrible at writing these. TERRIBLE.
 \section{Objective:}
 
-%PROBABLY not the wording I want, but the idea is that any job I get should be interesting, and that I should also be able to have something to show for it.
-%I think that's somewhat important to me when it comes to a career, at least.
-\small To be genuinely challenged in a position that requires the use of a wide variety of skills, from practical and aesthetic design to simulation to manufacturing.\normalsize
+\small To be genuinely challenged in a meaningful position that requires the use of a wide variety of skills, from practical and aesthetic design to simulation to manufacturing.\normalsize
 
 
 \section{Skills and Qualifications:}
@@ -48,16 +34,14 @@
 
 \section{Education:}
 
-\large\textit{Master of Science in Mechanical Engineering\hfill September 2009 -- December 2010 (expected)}\normalsize \\
-University of Alaska Fairbanks\\
+\affiliation[University of Alaska Fairbanks]{Master of Science in Mechanical Engineering}{Sept. 2009 -- Dec. 2010 (expected)}
 \emph{Completed 15 Credit Hours}\\
 \emph{3.68 Current GPA}\\
 
-\large\textit{Bachelor of Science in Mechanical Engineering, Cum Laude\hfill August 2005 -- May 2010}\normalsize \\
+\affiliation[University of Alaska Fairbanks]{Bachelor of Science in Mechanical Engineering}{Aug. 2005 -- May 2010}
 \textit{Minor in Mathematics}\\
-University of Alaska Fairbanks\\
 %\textit{Completed 143 Credit Hours}\\
-\textit{3.67 GPA} %Expected
+\textit{3.67 GPA}
 
 \begin{comment}
 Suggested by Lisa's dad, but not by Career Services.
@@ -90,8 +74,7 @@ Chapter\hfill2009}\normalsize\\
 
 \section{Employment History:}
 
-\large\textit{Research Assistant \hfill January 2010 --Present}\normalsize \\
-UAF Institute of Northern Engineering, Fairbanks, AK\\
+\affiliation[UAF Institute of Northern Engineering, Fairbanks AK]{Research Assistant}{January 2010 --Present}\normalsize
 %PO Box 755190 \\ 525 Duckering Bldg. \\ Fairbanks, AK  99775-5190
 Job duties include:
 \small\begin{itemize}
@@ -99,8 +82,7 @@ Job duties include:
 \item Analyzing geographical information using perl, python, MATLAB and C++
 \end{itemize}\normalsize\medskip
 
-\large\textit{Office Assistant \hfill January 2008 --December 2009}\normalsize \\
-UAF Mechanical Engineering Department, Fairbanks, AK\\
+\affiliation[UAF Mechanical Engineering Department, Fairbanks AK]{Office Assistant}{January 2008 --December 2009}
 %337 Duckering Bldg.
 Job duties include:
 \small\begin{itemize}
@@ -110,15 +92,13 @@ into a human-readable form
 administration
 \end{itemize}\normalsize\medskip
 
-\large\textit{Professor's Assistant	\hfill September 2008 -- December 2008}\normalsize \\
-UAF Mechanical Engineering Department, Fairbanks, AK\\
+\affiliation[UAF Mechanical Engineering Department, Fairbanks AK]{Professor's Assistant}{September 2008 -- December 2008}
 Job duties included:
 \small\begin{itemize}
 \item Grading and correcting homework assignments for ES 331, "Mechanics of Materials"
 \end{itemize}\normalsize\medskip
 
-\large\textit{Painter	\hfill May 2008 -- August 2008}\normalsize\\
-UAF Conference Services, Fairbanks, AK\\
+\affiliation[UAF Conference Services, Fairbanks AK]{Painter}{May 2008 -- August 2008}
 %732 Yukon Dr. \\ PO Box 756860 Fairbanks, AK  99775-6860
 Job duties included:
 \small\begin{itemize}
@@ -133,8 +113,7 @@ Job duties included:
 %\item Material stocking and staging
 %\end{itemize}\normalsize\medskip
 
-\large\textit{Laboratory Assistant \hfill February 2007 -- May 2007}\normalsize \\
-UAF Water and Environmental Research Center, Fairbanks, AK\\
+\affiliation[UAF Water and Environmental Research Center, Fairbanks AK]{Laboratory Assistant}{February 2007 -- May 2007}
 %306 Tanana Drive
 %P. O. Box 755860
 %University of Alaska Fairbanks
