@@ -1,0 +1,79 @@
+\documentclass{resume}
+
+\usepackage{paralist}%Squishing bulleted lists
+\usepackage{verbatim}%for the comment environment
+
+%Basically sets \noindent throughout
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0cm}
+
+\author{ <<author>> }
+\streetaddress{ <<streetaddress>> }
+\citystatezip{ <<citystatezip>> }
+\phone{ <<phone>> }
+\email{ <<email>> }
+\webpage{ <<webpage>> }
+
+\begin{document}
+
+\maketitle
+
+\section{Objective:}
+
+\small <<objective>> \normalsize
+
+\section{Skills and Qualifications:}
+\small\begin{itemize}
+<= for skill in skills =>
+    \item <<skill>>
+<= endfor =>
+\end{itemize}\normalsize
+
+\section{Education:}
+
+<= for school in schools =>
+    \affiliation[<< school['place'] >>]{<< school['degree'] >>}{<< school['dates'] >>}
+    <= if school['minor'] =>
+        \textit{Minor in <<school['minor']>>}
+    <= if school['chrs'] =>
+        \emph{Completed <<school['chrs']>> Credit Hours}\\
+    <= endif =>
+    <= if school['gpa'] =>
+        \emph{ << school['gpa'] >> GPA}\\
+    <= endif =>
+<= endfor =>
+
+\begin{comment}
+
+New section, trying it out
+Currently canning this section but THAT'S OKAY
+\section*{\underline{\textit{Projects:}}}
+\large\textit{Super Four-Bar Explorer \hfill December 2008}\normalsize
+\small\begin{itemize}
+\item A program written in python that uses a Gauss-Newton unconstrained optimization algorithm to fit the path traced by a four bar linkage to a given set of points
+\item Accompanied by a spreadsheet that illustrates four-bar linkage traced paths
+\end{itemize}\normalsize\medskip
+
+Another new section, recommended by Career Services. At worst, I have the
+wording for it, amirite?
+\section*{\underline{\textit{Service:}}}
+\tiny\begin{enumerate}
+\item Administered the web site and Facebook page for ASME's UAF student chapter \hfill 2009--2010
+\item Volunteered at the UAF College of Engineering and Mines' Engineer's Week Open House \hfill February 2010
+\end{enumerate}\normalsize
+
+\large\textit{Society of Automotive Engineers, UAF
+Chapter\hfill2009}\normalsize\\
+\textit{Treasurer}
+\end{comment}
+
+\section{Employment History:}
+
+\affiliation[<<job['employername']>>]{<<job['jobtitle']>>}{<<job['dates']>>}\normalsize
+Job duties include:
+\small\begin{itemize}
+<= for duty in job['duties'] =>
+    \item <<duty>>
+<= endfor =>
+
+\end{document}
