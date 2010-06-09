@@ -35,6 +35,7 @@
     \affiliation[<< school['place'] >>]{<< school['degree'] >>}{<< school['dates'] >>}
     <= if school['minor'] =>
         \textit{Minor in <<school['minor']>>}
+    <= endif =>
     <= if school['chrs'] =>
         \emph{Completed <<school['chrs']>> Credit Hours}\\
     <= endif =>
@@ -69,11 +70,14 @@ Chapter\hfill2009}\normalsize\\
 
 \section{Employment History:}
 
-\affiliation[<<job['employername']>>]{<<job['jobtitle']>>}{<<job['dates']>>}\normalsize
-Job duties include:
-\small\begin{itemize}
-<= for duty in job['duties'] =>
-    \item <<duty>>
+<= for job in jobs =>
+    \affiliation[<<job['employername']>>]{<<job['jobtitle']>>}{<<job['dates']>>}\normalsize
+    Job duties include:
+    \small\begin{itemize}
+    <= for duty in job['duties'] =>
+        \item <<duty>>
+    <= endfor =>
+    \end{itemize}\normalsize
 <= endfor =>
 
 \end{document}
