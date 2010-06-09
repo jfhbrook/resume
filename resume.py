@@ -1,10 +1,10 @@
 from jinja2 import Environment, FileSystemLoader
 
 template=Environment(loader=FileSystemLoader('templates/'),
-                #block_start_string='<=',
-                #block_end_string='=>''
-                #variable_start_string='<<',
-                #variable_end_string='>>'
+                block_start_string='<=',
+                block_end_string='=>',
+                variable_start_string='<<',
+                variable_end_string='>>'
                 ).get_template('resume.tex')
                 
 header={ 'author': 'Joshua Holbrook'
@@ -73,7 +73,7 @@ header={ 'author': 'Joshua Holbrook'
                 , { 'employername': 'Panco Construction, Talkeetna AK'
                   , 'employeraddress': r'PO Box 210 \\ Talkeetna AK  99676'
                   , 'jobtitle': 'Construction Laborer'
-                  , 'dates': 'May 2007 -- June 2007 full-time, January 2008 -- Present on irregular basis'
+                  , 'dates': r'May 2007 -- June 2007 full-time January 2008 -- Present on irregular basis'
                   , 'duties': [ 'Sanding, polishing and assisting in the fabrication of solid surface'
                               , 'Stocking, staging and assisting in the install of countertops other materials'
                               ]
@@ -92,6 +92,7 @@ header={ 'author': 'Joshua Holbrook'
                   , 'dates': 'May 2006 -- August 2006'
                   , 'duties': [ 'Stocking; cleaning and maintaining public areas; and preparing rooms for guest arrival']
                   }
+                ]
+}
 
-
-]
+print template.render(header)
