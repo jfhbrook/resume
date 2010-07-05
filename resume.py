@@ -8,7 +8,7 @@ template=Environment(loader=FileSystemLoader('templates/'),
                 ).get_template('resume.tex')
                 
 header={ 'author': 'Joshua Holbrook'
-       , 'streetaddress': '736-B 9th Avenue'
+       , 'streetaddress': '1727 Bridgewater Dr.'
        , 'citystatezip': 'Fairbanks AK  99709'
        , 'phone': '(907) 841-9238'
        , 'email': 'josh.holbrook@gmail.com'
