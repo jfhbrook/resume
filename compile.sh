@@ -1,5 +1,6 @@
-#!/usr/bin/env bash
-
+#!/bin/bash
+# A stupid script that builds the resume in tex.
+# Will probably switch to waf or rubber or something.
+python resume.py > resume.tex
 pdflatex resume
-latex2rtf resume #currently looks like ass
-hevea resume #has issues with \hrule and \hfill
+

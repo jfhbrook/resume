@@ -3,7 +3,7 @@ streetaddress: 1727 Bridgewater Dr.
 citystatezip: Fairbanks AK  99709
 phone: (907) 841-9238
 email: josh.holbrook@gmail.com
-webpage: http://www.github.com/jesusabdullah
+webpage: http://jesusabdullah.github.com
 
 objective: To be genuinely challenged in a meaningful position that requires the use
   of a wide variety of skills, from practical and aesthetic design to simulation to
@@ -19,15 +19,18 @@ schools:
    degree: Master of Science in Mechanical Engineering, 
    gpa: 3.68 current, 
    location: University of Alaska Fairbanks,
-   minor: Mathematics}
+   minor: Mathematics,
+   tags: [engineering, cv]}
 - {dates: Aug. 2005 -- May 2010, 
    degree: 'Bachelor of Science in Mechanical Engineering, Cum Laude', 
    gpa: '3.67', 
-   location: University of Alaska Fairbanks}
+   location: University of Alaska Fairbanks,
+   tags: [engineering, cv]}
 - {dates: May 2005, 
    degree: High School Diploma, 
    gpa: '3.73', 
-   location: Susitna Valley Jr/Sr High School}
+   location: Susitna Valley Jr/Sr High School,
+   tags: [cv]}
 
 jobs:
 - dates: January 2010 -- Present
@@ -36,6 +39,7 @@ jobs:
   employeraddress: PO Box 755190 \\ 525 Duckering Bldg. \\ Fairbanks, AK  99775-5190
   employername: UAF Institute of Northern Engineering, Fairbanks AK
   jobtitle: Research Assistant
+  tags: [engineering, cv]
 
 - dates: January 2008 -- December 2009
   duties: [Tracking purchase information on UAF's Oracle database and compiling it into a human-readable form, 
@@ -43,18 +47,21 @@ jobs:
   employeraddress: 337 Duckering Bldg.
   employername: UAF Mechanical Engineering Department, Fairbanks AK
   jobtitle: Office Assistant
+  tags: [engineering, cv]
 
 - dates: September 2008 -- December 2008
   duties: ['Grading and correcting homework assignments for ES 331, "Mechanics of Materials"']
   employeraddress: 337 Duckering Bldg.
   employername: UAF Mechanical Engineering Department, Fairbanks AK
   jobtitle: Professor' Assistant
+  tags: [engineering, cv]
 
 - dates: May 2008 -- August 2008
   duties: ['Patching, painting and wet-sanding walls, ceilings, doors and trim']
   employeraddress: 732 Yukon Dr. \\ PO Box 756860 Fairbanks, AK  99775-6860
   employername: UAF Conference Services, Fairbanks AK
   jobtitle: Painter
+  tags: [engineering, cv]
 
 - dates: May 2007 -- June 2007 full-time January 2008 -- Present on irregular basis
   duties: ['Sanding, polishing and assisting in the fabrication of solid surface',
@@ -62,15 +69,18 @@ jobs:
   employeraddress: PO Box 210 \\ Talkeetna AK  99676
   employername: Panco Construction, Talkeetna AK
   jobtitle: Construction Laborer
+  tags: [cv]
 
 - dates: February 2007 -- May 2007
   duties: [Taking inventory of chemical stock, 'Tabulating, manipulating and organizing test data in Excel']
   employeraddress: P. O. Box 755860 \\ Fairbanks AK 99775-5860
   employername: UAF Water and Environmental Research Center, Fairbanks AK
   jobtitle: Laboratory Assistant
+  tags: [cv]
 
 - dates: May 2006 -- August 2006
   duties: [Stocking; cleaning and maintaining public areas; and preparing rooms for guest arrival]
   employeraddress: ??
   employername: Aramark-Harrison Lodging, Denali National Park AK
   jobtitle: Porter
+  tags: [cv]

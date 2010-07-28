@@ -37,7 +37,7 @@
         \textit{Minor in <<school['minor']>>}
     <= endif =>
     <= if school['chrs'] =>
-        \emph{Completed <<school['chrs']>> Credit Hours}\\
+        \textit{Completed <<school['chrs']>> Credit Hours}
     <= endif =>
     <= if school['gpa'] =>
         \emph{ << school['gpa'] >> GPA}\\
@@ -78,6 +78,7 @@ Chapter\hfill2009}\normalsize\\
         \item <<duty>>
     <= endfor =>
     \end{itemize}\normalsize
+    \medskip
 <= endfor =>
 
 \end{document}
