@@ -29,7 +29,9 @@
 <= endfor =>
 \end{itemize}\normalsize
 
-\section{Education:}
+<= if schools =>
+    \section{Education:}
+<= endif =>
 
 <= for school in schools =>
     \affiliation[<< school['place'] >>]{<< school['degree'] >>}{<< school['dates'] >>}
@@ -68,7 +70,22 @@ Chapter\hfill2009}\normalsize\\
 \textit{Treasurer}
 \end{comment}
 
-\section{Employment History:}
+<= if projects =>
+    \section{Projects:}
+<= endif =>
+
+<= for project in projects =>
+    \affiliation[<< project['title'] >>]{<< project['dates'] >>}
+    \textit{<< project['desc'] >>}
+<= endfor =>
+
+<= if service =>
+    \section{Service:}
+<= endif =>
+
+<= if jobs =>
+    \section{Employment History:}
+<= endif =>
 
 <= for job in jobs =>
     \affiliation[<<job['employername']>>]{<<job['jobtitle']>>}{<<job['dates']>>}\normalsize
