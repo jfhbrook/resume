@@ -9,12 +9,15 @@ template=Environment(loader=FileSystemLoader('templates/'),
                 ).get_template('resume.tex')
 
 tag='engineering'
-tagged=['schools','jobs']
 
 with open('resume.yaml') as infile:
     header = load(infile)
-    for group in tagged:
+    for group in header:
+        if 'tags' in group:
+            if tag not in group['tags']:
+                header.remove(group)
         for item in header[group]:
-            if tag not in item['tags']:
-                header[group].remove(item)
+            if 'tags' in item:
+                if tag not in item['tags']:
+                    header[group].remove(item)
     print template.render(header)

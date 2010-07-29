@@ -31,20 +31,19 @@
 
 <= if schools =>
     \section{Education:}
+    <= for school in schools =>
+        \affiliation[<< school['place'] >>]{<< school['degree'] >>}{<< school['dates'] >>}
+        <= if school['minor'] =>
+            \textit{Minor in <<school['minor']>>}
+        <= endif =>
+        <= if school['chrs'] =>
+            \textit{Completed <<school['chrs']>> Credit Hours}
+        <= endif =>
+        <= if school['gpa'] =>
+            \emph{ << school['gpa'] >> GPA}\\
+        <= endif =>
+    <= endfor =>
 <= endif =>
-
-<= for school in schools =>
-    \affiliation[<< school['place'] >>]{<< school['degree'] >>}{<< school['dates'] >>}
-    <= if school['minor'] =>
-        \textit{Minor in <<school['minor']>>}
-    <= endif =>
-    <= if school['chrs'] =>
-        \textit{Completed <<school['chrs']>> Credit Hours}
-    <= endif =>
-    <= if school['gpa'] =>
-        \emph{ << school['gpa'] >> GPA}\\
-    <= endif =>
-<= endfor =>
 
 \begin{comment}
 
@@ -72,30 +71,44 @@ Chapter\hfill2009}\normalsize\\
 
 <= if projects =>
     \section{Projects:}
+    <= for project in projects =>
+        \affiliation{<< project['title'] >>}{<< project['dates'] >>}
+        <= if project['descr'] =>
+            \small\begin{itemize}
+            <= for line in project['descr'] =>
+                \item <<line>>
+            <= endfor =>
+            \end{itemize}\normalsize
+        <= endif =>
+    <= endfor =>
 <= endif =>
-
-<= for project in projects =>
-    \affiliation[<< project['title'] >>]{<< project['dates'] >>}
-    \textit{<< project['desc'] >>}
-<= endfor =>
 
 <= if service =>
     \section{Service:}
+    <= for serv in service =>
+        \affiliation{<< serv['groupname'] >>}{<< serv['dates'] >>}
+        <= if serv['duties'] =>
+            \small\begin{itemize}
+            <= for line in serv['duties'] =>
+                \item <<line>>
+            <= endfor =>
+            \end{itemize}\normalsize
+        <= endif =>
+    <= endfor =>
 <= endif =>
 
 <= if jobs =>
     \section{Employment History:}
-<= endif =>
-
-<= for job in jobs =>
-    \affiliation[<<job['employername']>>]{<<job['jobtitle']>>}{<<job['dates']>>}\normalsize
-    Job duties include:
-    \small\begin{itemize}
-    <= for duty in job['duties'] =>
-        \item <<duty>>
+    <= for job in jobs =>
+        \affiliation[<<job['employername']>>]{<<job['jobtitle']>>}{<<job['dates']>>}\normalsize
+        Job duties include:
+        \small\begin{itemize}
+        <= for duty in job['duties'] =>
+            \item <<duty>>
+        <= endfor =>
+        \end{itemize}\normalsize
+        \medskip
     <= endfor =>
-    \end{itemize}\normalsize
-    \medskip
-<= endfor =>
+<= endif =>
 
 \end{document}

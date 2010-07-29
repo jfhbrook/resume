@@ -32,6 +32,22 @@ schools:
    location: Susitna Valley Jr/Sr High School,
    tags: [cv]}
 
+projects:
+- title: 'Super Four-Bar Explorer'
+  dates: December 2008
+  descr: 
+    - 'A program written in python that uses a Gauss-Newton unconstrained optimization algorithm to fit the path traced by a four bar linkage to a given set of points'
+    - 'Accompanied by a spreadsheet that illustrates four-bar linkage traced paths'
+  tags: [cv]
+
+service:
+- groupname: 'American Society of Mechanical Engineers, Student Chapter'
+  dates: September 2009 -- May 2010
+  duties:
+    - Administered web site and facebook page
+    - Volunteered at E-Week activities
+  tags: [cv]
+
 jobs:
 - dates: January 2010 -- Present
   duties: [Designing and running finite element models using COMSOL and MATLAB, 
