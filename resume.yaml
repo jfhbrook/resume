@@ -5,9 +5,9 @@ phone: (907) 841-9238
 email: josh.holbrook@gmail.com
 webpage: http://jesusabdullah.github.com
 
-objective: To be genuinely challenged in a meaningful position that requires the use
-  of a wide variety of skills, from practical and aesthetic design to simulation to
-  manufacturing.
+objective: 
+   - text: To be genuinely challenged in a meaningful position that requires the use of a wide variety of skills, from practical and aesthetic design to simulation to manufacturing.
+     tags: [engineering]
 
 skills: [Proficient with Microsoft Office suite and GNU/Linux; and experience with
     COMSOL Multiphysics, 'Proficient with MATLAB and python/scipy; and experience
