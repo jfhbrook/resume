@@ -6,7 +6,7 @@ template=Environment(loader=FileSystemLoader('templates/'),
                 block_end_string='=>',
                 variable_start_string='<<',
                 variable_end_string='>>'
-                ).get_template('resume.md')
+                ).get_template('resume.tex')
 
 tag='cv'
 
