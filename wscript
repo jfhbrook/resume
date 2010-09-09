@@ -10,6 +10,10 @@ def configure(conf):
     conf.check_tool('python')
     conf.check_python_module('jinja2')
     conf.check_python_module('yaml')
+    conf.check_tool('tex')
+    if options.output == 'pdf':
+        if not conf.env.PDFLATEX:
+            conf.fatal('Gurl how do you expect to make a pdf without pdflatex?')
     
 
 def build(bld):
@@ -17,8 +21,12 @@ def build(bld):
     templates = {'pdf': 'resume.tex',
                  'markdown': 'resume.md'}
     tag=options.tag
-    template = templates[options.output]
+    tpl_name = templates[options.output]
 
+
+    # This section here is originally from resume.py. I don't know
+    # if there's a more idiomatic way to do this with waf or not.
+    # Lookit section 7.4 in The Waf Book.
     from jinja2 import Environment, FileSystemLoader
     from yaml import load
 
@@ -27,9 +35,9 @@ def build(bld):
                     block_end_string='=>',
                     variable_start_string='<<',
                     variable_end_string='>>'
-                    ).get_template(template)
+                    ).get_template(tpl_name)
 
-    with open('resume.yaml') as infile:
+    with open(top+'/resume.yaml', 'r') as infile:
         header = load(infile)
         for group in header:
             if 'tags' in group:
@@ -39,9 +47,14 @@ def build(bld):
                 if 'tags' in item:
                     if tag not in item['tags']:
                         header[group].remove(item)
-        output = template.render(header)
+        with open(top+'/'+out+'/'+tpl_name, 'w') as outfile:
+            outfile.write(template.render(header))
+    #That's the end of that!
 
-    if (options.output == "pdf"):
-        pass
-        #obj = bld.new_task_gen(features='tex')
-        #obj.source
+    if (options.output == "pdf"):        
+        obj = bld( features = 'tex'
+                 , type='pdflatex'
+                 , source = out+'/resume.tex'
+                 )
+        obj.deps = out+'/resume.tex'
+
