@@ -56,9 +56,16 @@ def build(bld):
             print('Writing output to "'+tgt+'":')
             with open(tgt, 'w') as outfile:
                 outfile.write(template.render(header))
-                return 0
 
     bld( rule = templatize
        , source = 'templates/'+templates[options.output]
        , target = templates[options.output]
+       , name = 'templatization'
        )
+
+    if options.output == 'pdf':
+        bld( rule = 'pdflatex ${SRC} ${TGT}'
+           , source = 'build/default/resume.tex'
+           , target = 'resume.pdf'
+           , name = 'PDFization'
+           )
