@@ -57,23 +57,15 @@ def build(bld):
             with open(tgt, 'w') as outfile:
                 outfile.write(template.render(header))
 
-    # These definitely need to be ordered. Look at The Waf Book, sect. 11.4
-    # Also, resume.cls needs to be in an expected position--this may require
-    # another task to scoot resume.cls to where it belongs.
-
     bld( rule = templatize
        , source = 'templates/'+templates[options.output]
        , target = templates[options.output]
-       , name = 'templatize'
+       , name = 'templatization'
        )
 
-    bld( rule = 'cp ../resume.cls ${TGT}'
-       , target = 'resume.cls'
-       , name = 'setup'
-       , after = 'templatize'
-       )
-
-    bld( rule = 'cd default && pdflatex resume.tex'
+    if options.output == 'pdf':
+        bld( rule = 'pdflatex ${SRC} ${TGT}'
+           , source = 'build/default/resume.tex'
+           , target = 'resume.pdf'
            , name = 'PDFization'
-           , after = 'setup'
            )
