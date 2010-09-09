@@ -20,41 +20,45 @@ def build(bld):
     from Options import options
     templates = {'pdf': 'resume.tex',
                  'markdown': 'resume.md'}
-    tag=options.tag
-    tpl_name = templates[options.output]
 
+    def templatize(task):
+        # This section here is originally from resume.py. I don't know
+        # if there's a more idiomatic way to do this with waf or not.
+        # Lookit sections 7.4 and 8.2 in The Waf Book.
+        from jinja2 import Environment, FileSystemLoader
+        from yaml import load
+        import re
 
-    # This section here is originally from resume.py. I don't know
-    # if there's a more idiomatic way to do this with waf or not.
-    # Lookit section 7.4 in The Waf Book.
-    from jinja2 import Environment, FileSystemLoader
-    from yaml import load
+        src = re.split('/', task.inputs[0].srcpath(task.env))
+        tgt = task.outputs[0].bldpath(task.env)
+        tag = options.tag
 
-    template=Environment(loader=FileSystemLoader('templates/'),
-                    block_start_string='<=',
-                    block_end_string='=>',
-                    variable_start_string='<<',
-                    variable_end_string='>>'
-                    ).get_template(tpl_name)
+        print('Searching for template "'+src[2]+'" in "'+src[0]+'/'+src[1]+'":')
+        template=Environment(loader = FileSystemLoader(src[0]+'/'+src[1])
+                            , block_start_string = '<='
+                            , block_end_string = '=>'
+                            , variable_start_string = '<<'
+                            , variable_end_string = '>>'
+                            ).get_template(src[2])
 
-    with open(top+'/resume.yaml', 'r') as infile:
-        header = load(infile)
-        for group in header:
-            if 'tags' in group:
-                if tag not in group['tags']:
-                    header.remove(group)
-            for item in header[group]:
-                if 'tags' in item:
-                    if tag not in item['tags']:
-                        header[group].remove(item)
-        with open(top+'/'+out+'/'+tpl_name, 'w') as outfile:
-            outfile.write(template.render(header))
-    #That's the end of that!
+        print('Processing template using "'+src[0]+'/resume.yaml":')
 
-    if (options.output == "pdf"):        
-        obj = bld( features = 'tex'
-                 , type='pdflatex'
-                 , source = out+'/resume.tex'
-                 )
-        obj.deps = out+'/resume.tex'
+        with open(src[0]+'/resume.yaml', 'r') as infile:
+            header = load(infile)
+            for group in header:
+                if 'tags' in group:
+                    if tag not in group['tags']:
+                        header.remove(group)
+                for item in header[group]:
+                    if 'tags' in item:
+                        if tag not in item['tags']:
+                            header[group].remove(item)
+            print('Writing output to "'+tgt+'":')
+            with open(tgt, 'w') as outfile:
+                outfile.write(template.render(header))
+                return 0
 
+    bld( rule = templatize
+       , source = 'templates/'+templates[options.output]
+       , target = templates[options.output]
+       )
