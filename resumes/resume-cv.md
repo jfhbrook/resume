@@ -61,6 +61,63 @@
             
         
     
+### Counting of Stream Crossings Along a Path Between Two Given Alaskan Villages -- March 2010 -- May 2010
+        
+            
+* Used python and qgis
+            
+* First experience with ESRI shapefiles and GIS in general
+            
+* Part of a feasibility study on laying unburied fiber optic cable over tundra in remote regions of Alaska
+            
+        
+    
+### Methlabs -- June 2010 -- August 2010
+        
+            
+* A collection of tools for Matlab
+            
+* m-files inspired by functional programming paradigms such as those in Haskell
+            
+* Includes a python script that allows shebanged scripts to be interpreted by Matlab
+            
+        
+    
+### The Determination of Anisotropic Thermal Conductivity with Thermal Needle Probe Measurements -- May 2010 -- Present
+        
+            
+* Masters Thesis
+            
+* Involves 3-D modeling with comsol and matlab to simulate thermal needle probe measurements
+            
+        
+    
+### Lulzbot -- July 2010 -- Present
+        
+            
+* IRC Bot
+            
+* First significant project in javascript and node.js
+            
+* Watches github, checks weather
+            
+* Lulzbot-X in irc://irc.freenode.net/\#stackvm
+            
+        
+    
+### Node-Chess -- August 28, 2010 -- August 29th, 2010
+        
+            
+* A Node Knockout contest submission
+            
+* Personally responsible for most of the art and some of the UI
+            
+* Written in only 48 hours
+            
+* Hosted at http://dark-knights.no.de
+            
+        
+    
 
 
 
