@@ -21,6 +21,9 @@ def build(bld):
     templates = {'pdf': 'resume.tex',
                  'markdown': 'resume.md'}
 
+    print(options.output)
+    print(options.tag)
+
     def templatize(task):
         # This section here is originally from resume.py. I don't know
         # if there's a more idiomatic way to do this with waf or not.
@@ -67,13 +70,21 @@ def build(bld):
        , name = 'templatize'
        )
 
-    bld( rule = 'cp ../resume.cls ${TGT}'
-       , target = 'resume.cls'
-       , name = 'setup'
-       , after = 'templatize'
-       )
+    if options.output == 'pdf':
+        bld( rule = 'cp ../resume.cls ${TGT}'
+           , target = 'resume.cls'
+           , name = 'setup'
+           , after = 'templatize'
+           )
 
-    bld( rule = 'cd default && pdflatex resume.tex'
+        bld( rule = 'cd default && pdflatex resume.tex && cp resume.pdf ../../resumes/'
            , name = 'PDFization'
            , after = 'setup'
+           )
+
+    else:
+        bld( rule = 'cp ${SRC} ../resumes/'+templates[options.output]
+           , name = '"install"'
+           , source = templates[options.output]
+           , after = 'templatize'
            )
