@@ -1,9 +1,0 @@
-My resume is written in LaTeX, and once everything's back in order, there should be >1 compiled forms for your convenience:
-
-* .pdf, which looks best, especially printed. Should fit on one page.
-
-* .rtf, since a lot of people prefer MS Word-compatible formats. Might not fit on one page.
-
-* .html (or something) for quick online viewing.
-
-Other goals including separation of content from formatting, and creating two versions--one as a complete academic CV, and the other as a one-page industry resume.
