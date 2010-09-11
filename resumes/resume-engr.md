@@ -47,36 +47,36 @@ To be genuinely challenged in a meaningful position that requires the use of a w
 
 ## Projects:
     
-### Counting of Stream Crossings Along a Path Between Two Given Alaskan Villages -- March 2010 -- May 2010
+### Lulzbot -- July 2010 -- Present
         
             
-* Used python and qgis
+* IRC Bot
             
-* First experience with ESRI shapefiles and GIS in general
+* First significant project in javascript and node.js
             
-* Part of a feasibility study on laying unburied fiber optic cable over tundra in remote regions of Alaska
+* Watches github, checks weather
             
-        
-    
-### The Determination of Anisotropic Thermal Conductivity with Thermal Needle Probe Measurements -- May 2010 -- Present
-        
-            
-* Masters Thesis
-            
-* Involves 3-D modeling with comsol and matlab to simulate thermal needle probe measurements
+* Lulzbot-X in irc://irc.freenode.net/\#stackvm
             
         
     
-### Node-Chess -- August 28, 2010 -- August 29th, 2010
+### Methlabs -- June 2010 -- August 2010
         
             
-* A Node Knockout contest submission
+* A collection of tools for Matlab
             
-* Personally responsible for most of the art and some of the UI
+* m-files inspired by functional programming paradigms such as those in Haskell
             
-* Written in only 48 hours
+* Includes a python script that allows shebanged scripts to be interpreted by Matlab
             
-* Hosted at http://dark-knights.no.de
+        
+    
+### Super Four-Bar Explorer -- December 2008
+        
+            
+* A program written in python that uses a Gauss-Newton unconstrained optimization algorithm to fit the path traced by a four bar linkage to a given set of points
+            
+* Accompanied by a spreadsheet that illustrates four-bar linkage traced paths
             
         
     

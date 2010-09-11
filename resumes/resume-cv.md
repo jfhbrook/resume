@@ -52,43 +52,16 @@
 
 ## Projects:
     
-### Super Four-Bar Explorer -- December 2008
+### Node-Chess -- August 28, 2010 -- August 29th, 2010
         
             
-* A program written in python that uses a Gauss-Newton unconstrained optimization algorithm to fit the path traced by a four bar linkage to a given set of points
+* A Node Knockout contest submission
             
-* Accompanied by a spreadsheet that illustrates four-bar linkage traced paths
+* Personally responsible for most of the art and some of the UI
             
-        
-    
-### Counting of Stream Crossings Along a Path Between Two Given Alaskan Villages -- March 2010 -- May 2010
-        
+* Written in only 48 hours
             
-* Used python and qgis
-            
-* First experience with ESRI shapefiles and GIS in general
-            
-* Part of a feasibility study on laying unburied fiber optic cable over tundra in remote regions of Alaska
-            
-        
-    
-### Methlabs -- June 2010 -- August 2010
-        
-            
-* A collection of tools for Matlab
-            
-* m-files inspired by functional programming paradigms such as those in Haskell
-            
-* Includes a python script that allows shebanged scripts to be interpreted by Matlab
-            
-        
-    
-### The Determination of Anisotropic Thermal Conductivity with Thermal Needle Probe Measurements -- May 2010 -- Present
-        
-            
-* Masters Thesis
-            
-* Involves 3-D modeling with comsol and matlab to simulate thermal needle probe measurements
+* Hosted at http://dark-knights.no.de
             
         
     
@@ -105,16 +78,43 @@
             
         
     
-### Node-Chess -- August 28, 2010 -- August 29th, 2010
+### The Determination of Anisotropic Thermal Conductivity with Thermal Needle Probe Measurements -- May 2010 -- Present
         
             
-* A Node Knockout contest submission
+* Masters Thesis
             
-* Personally responsible for most of the art and some of the UI
+* Involves 3-D modeling with comsol and matlab to simulate thermal needle probe measurements
             
-* Written in only 48 hours
+        
+    
+### Methlabs -- June 2010 -- August 2010
+        
             
-* Hosted at http://dark-knights.no.de
+* A collection of tools for Matlab
+            
+* m-files inspired by functional programming paradigms such as those in Haskell
+            
+* Includes a python script that allows shebanged scripts to be interpreted by Matlab
+            
+        
+    
+### Counting of Stream Crossings Along a Path Between Two Given Alaskan Villages -- March 2010 -- May 2010
+        
+            
+* Used python and qgis
+            
+* First experience with ESRI shapefiles and GIS in general
+            
+* Part of a feasibility study on laying unburied fiber optic cable over tundra in remote regions of Alaska
+            
+        
+    
+### Super Four-Bar Explorer -- December 2008
+        
+            
+* A program written in python that uses a Gauss-Newton unconstrained optimization algorithm to fit the path traced by a four bar linkage to a given set of points
+            
+* Accompanied by a spreadsheet that illustrates four-bar linkage traced paths
             
         
     

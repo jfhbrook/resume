@@ -33,44 +33,6 @@ schools:
    tags: [cv]}
 
 projects:
-- title: 'Super Four-Bar Explorer'
-  dates: December 2008
-  descr: 
-    - 'A program written in python that uses a Gauss-Newton unconstrained optimization algorithm to fit the path traced by a four bar linkage to a given set of points'
-    - 'Accompanied by a spreadsheet that illustrates four-bar linkage traced paths'
-  tags: [cv]
-
-- title: 'Counting of Stream Crossings Along a Path Between Two Given Alaskan Villages'
-  dates: March 2010 -- May 2010
-  descr: 
-    - Used python and qgis
-    - First experience with ESRI shapefiles and GIS in general
-    - Part of a feasibility study on laying unburied fiber optic cable over tundra in remote regions of Alaska
-  tags: [cv]
-
-- title: 'Methlabs'
-  dates: June 2010 -- August 2010
-  descr:
-    - 'A collection of tools for Matlab'
-    - 'm-files inspired by functional programming paradigms such as those in Haskell'
-    - 'Includes a python script that allows shebanged scripts to be interpreted by Matlab'
-  tags: [cv]
-
-- title: 'The Determination of Anisotropic Thermal Conductivity with Thermal Needle Probe Measurements'
-  dates: May 2010 -- Present
-  descr: 
-    - 'Masters Thesis'
-    - 'Involves 3-D modeling with comsol and matlab to simulate thermal needle probe measurements'
-  tags: [cv]
-
-- title: 'Lulzbot'
-  dates: July 2010 -- Present
-  descr: 
-    - 'IRC Bot'
-    - 'First significant project in javascript and node.js'
-    - 'Watches github, checks weather'
-    - 'Lulzbot-X in irc://irc.freenode.net/#stackvm'
-  tags: [cv]
 
 - title: 'Node-Chess'
   dates: August 28, 2010 -- August 29th, 2010
@@ -81,6 +43,44 @@ projects:
     - 'Hosted at http://dark-knights.no.de'
   tags: [cv]
 
+- title: 'Lulzbot'
+  dates: July 2010 -- Present
+  descr: 
+    - 'IRC Bot'
+    - 'First significant project in javascript and node.js'
+    - 'Watches github, checks weather'
+    - 'Lulzbot-X in irc://irc.freenode.net/\#stackvm'
+  tags: [cv]
+
+- title: 'The Determination of Anisotropic Thermal Conductivity with Thermal Needle Probe Measurements'
+  dates: May 2010 -- Present
+  descr: 
+    - 'Masters Thesis'
+    - 'Involves 3-D modeling with comsol and matlab to simulate thermal needle probe measurements'
+  tags: [cv]
+
+- title: 'Methlabs'
+  dates: June 2010 -- August 2010
+  descr:
+    - 'A collection of tools for Matlab'
+    - 'm-files inspired by functional programming paradigms such as those in Haskell'
+    - 'Includes a python script that allows shebanged scripts to be interpreted by Matlab'
+  tags: [cv]
+
+- title: 'Counting of Stream Crossings Along a Path Between Two Given Alaskan Villages'
+  dates: March 2010 -- May 2010
+  descr: 
+    - Used python and qgis
+    - First experience with ESRI shapefiles and GIS in general
+    - Part of a feasibility study on laying unburied fiber optic cable over tundra in remote regions of Alaska
+  tags: [cv]
+
+- title: 'Super Four-Bar Explorer'
+  dates: December 2008
+  descr: 
+    - 'A program written in python that uses a Gauss-Newton unconstrained optimization algorithm to fit the path traced by a four bar linkage to a given set of points'
+    - 'Accompanied by a spreadsheet that illustrates four-bar linkage traced paths'
+  tags: [cv]
 
 service:
 - groupname: 'American Society of Mechanical Engineers, Student Chapter'
