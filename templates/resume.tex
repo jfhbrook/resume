@@ -77,6 +77,20 @@
     <= endfor =>
 <= endif =>
 
+<= if awards =>
+    \section{Awards \& Grants:}
+    <= for project in awards =>
+        \affiliation{<< project['title'] >>}{<< project['dates'] >>}
+        <= if project['descr'] =>
+            \small\begin{itemize}
+            <= for line in project['descr'] =>
+                \item <<line>>
+            <= endfor =>
+            \end{itemize}\normalsize
+        <= endif =>
+    <= endfor =>
+<= endif =>
+
 <= if jobs =>
     \section{Employment History:}
     <= for job in jobs =>

@@ -56,6 +56,17 @@
     <= endfor =>
 <= endif =>
 
+<= if awards =>
+## Awards & Grants:
+    <= for project in awards =>
+### << project['title'] >> -- << project['dates'] >>
+        <= if project['descr'] =>
+            <= for line in project['descr'] =>
+* <<line>>
+            <= endfor =>
+        <= endif =>
+    <= endfor =>
+<= endif =>
 
 <= if jobs =>
 ## Employment History:
