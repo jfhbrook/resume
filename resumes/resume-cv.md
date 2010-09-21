@@ -135,11 +135,51 @@
 
 
 
+## Awards & Grants:
+    
+### Center for Global Change Student Research Grant -- May 2010
+        
+            
+* Project title: Determining Anisotropic Thermal Conductivity of Snow with Needle Probe Measurements
+            
+* Awarded 8,200
+            
+        
+    
+### 3rd Place, 2010 Campus Research Day Undergraduate Symposium -- April 9th, 2010
+        
+            
+* Project title: "Development and Benchmarking of Optical Touchscreen User Interface Technology"
+            
+* Awarded 1000
+            
+        
+    
+### Undergraduate Research Grant -- October 2010
+        
+            
+* Project title: "Development and Benchmarking of Optical Touchscreen User Interface Technology"
+            
+* Awarded 2,250
+            
+        
+    
+
+
 
 ## Employment History:
 
 
-### Research Assistant -- January 2010 -- Present
+### Teaching Assistant -- January 2010 -- August 2010
+UAF Department of Mechanical Engineering, Fairbanks AK
+Job duties include:
+
+* Grading homework for ME 458/658, "Energy and the Environment"
+
+* Assembling/distributing course materials and grading exams for ES 346, "Basic Thermodynamics"
+
+
+### Research Assistant -- January 2010 -- August 2010
 UAF Institute of Northern Engineering, Fairbanks AK
 Job duties include:
 
