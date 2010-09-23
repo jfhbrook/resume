@@ -43,49 +43,6 @@ To be genuinely challenged in a meaningful position that requires the use of a w
 
 
 
-
-
-## Projects:
-    
-### Lulzbot -- July 2010 -- Present
-        
-            
-* IRC Bot
-            
-* First significant project in javascript and node.js
-            
-* Watches github, checks weather
-            
-* Lulzbot-X in irc://irc.freenode.net/\#stackvm
-            
-        
-    
-### Methlabs -- June 2010 -- August 2010
-        
-            
-* A collection of tools for Matlab
-            
-* m-files inspired by functional programming paradigms such as those in Haskell
-            
-* Includes a python script that allows shebanged scripts to be interpreted by Matlab
-            
-        
-    
-### Super Four-Bar Explorer -- December 2008
-        
-            
-* A program written in python that uses a Gauss-Newton unconstrained optimization algorithm to fit the path traced by a four bar linkage to a given set of points
-            
-* Accompanied by a spreadsheet that illustrates four-bar linkage traced paths
-            
-        
-    
-
-
-
-
-
-
 ## Employment History:
 
 
