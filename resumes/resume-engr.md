@@ -25,9 +25,6 @@ To be genuinely challenged in a meaningful position that requires the use of a w
 ### Master of Science in Mechanical Engineering -- Sept. 2009 -- Dec. 2010 (expected)
 
 
-*Minor in Mathematics*
-
-
 *Completed 15 Credit Hours*  
 
 
@@ -36,8 +33,7 @@ To be genuinely challenged in a meaningful position that requires the use of a w
 
 ### Bachelor of Science in Mechanical Engineering, Cum Laude -- Aug. 2005 -- May 2010
 
-
-
+*Minor in Mathematics*
 
 *3.67 GPA*
 

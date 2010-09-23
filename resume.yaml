@@ -19,10 +19,10 @@ schools:
    degree: Master of Science in Mechanical Engineering, 
    gpa: 3.68 current, 
    location: University of Alaska Fairbanks,
-   minor: Mathematics,
    tags: [engineering, cv]}
 - {dates: Aug. 2005 -- May 2010, 
-   degree: 'Bachelor of Science in Mechanical Engineering, Cum Laude', 
+   degree: 'Bachelor of Science in Mechanical Engineering, Cum Laude',
+   minor: Mathematics, 
    gpa: '3.67', 
    location: University of Alaska Fairbanks,
    tags: [engineering, cv]}
@@ -36,27 +36,24 @@ projects:
 
 - title: 'Node-Chess'
   dates: August 28, 2010 -- August 29th, 2010
-  descr:
-    - 'A Node Knockout contest submission'
-    - 'Personally responsible for most of the art and some of the UI'
-    - 'Written in only 48 hours'
-    - 'Hosted at http://dark-knights.no.de'
+  descr: [ 'A Node Knockout contest submission'
+         , 'Personally responsible for most of the art and some of the UI'
+         , 'Written in only 48 hours'
+         , 'Hosted at http://dark-knights.no.de']
   tags: [cv]
 
 - title: 'Lulzbot'
   dates: July 2010 -- Present
-  descr: 
-    - 'IRC Bot'
-    - 'First significant project in javascript and node.js'
-    - 'Watches github, checks weather'
-    - 'Lulzbot-X in irc://irc.freenode.net/\#stackvm'
+  descr: [ 'IRC Bot'
+         , 'First significant project in javascript and node.js'
+         , 'Watches github, checks weather'
+         , 'Lulzbot-X in irc://irc.freenode.net/\#stackvm' ]
   tags: [cv]
 
 - title: 'The Determination of Anisotropic Thermal Conductivity with Thermal Needle Probe Measurements'
   dates: May 2010 -- Present
-  descr: 
-    - 'Masters Thesis'
-    - 'Involves 3-D modeling with comsol and matlab to simulate thermal needle probe measurements'
+  descr: [ 'Masters Thesis'
+         , 'Involves 3-D modeling with comsol and matlab to simulate thermal needle probe measurements' ]
   tags: [cv]
 
 - title: 'Methlabs'

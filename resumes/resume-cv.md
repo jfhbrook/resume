@@ -22,9 +22,6 @@
 ### Master of Science in Mechanical Engineering -- Sept. 2009 -- Dec. 2010 (expected)
 
 
-*Minor in Mathematics*
-
-
 *Completed 15 Credit Hours*  
 
 
@@ -33,8 +30,7 @@
 
 ### Bachelor of Science in Mechanical Engineering, Cum Laude -- Aug. 2005 -- May 2010
 
-
-
+*Minor in Mathematics*
 
 *3.67 GPA*
 
