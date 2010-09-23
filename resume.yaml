@@ -87,6 +87,21 @@ service:
     - Volunteered at E-Week activities
   tags: [cv]
 
+awards:
+- title: 'Center for Global Change Student Research Grant'
+  dates: 'May 2010'
+  descr: ['Project title: "Determining Anisotropic Thermal Conductivity of Snow with Needle Probe Measurements"',
+          'Awarded \$8200']
+- title: '3rd Place, 2010 Campus Research Day Undergraduate Symposium'
+  dates: 'April 9th, 2010'
+  descr: ['Project title: "Development and Benchmarking of Optical Touchscreen User Interface Technology"',
+          'Awarded \$1000']
+- title: 'Undergraduate Research Grant'
+  dates: 'October 2009'
+  descr: ['Project title: "Development and Benchmarking of Optical Touchscreen User Interface Technology"',
+          'Awarded \$2250']
+
+
 jobs:
 - dates: January 2010 -- Present
   duties: [Designing and running finite element models using COMSOL and MATLAB, 
