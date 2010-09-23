@@ -59,15 +59,15 @@
     
 ### Center for Global Change Student Research Grant -- May 2010
 * Project title: "Determining Anisotropic Thermal Conductivity of Snow with Needle Probe Measurements"
-* Awarded \$8200
+* Awarded $8200
     
 ### 3rd Place, 2010 Campus Research Day Undergraduate Symposium -- April 9th, 2010
 * Project title: "Development and Benchmarking of Optical Touchscreen User Interface Technology"
-* Awarded \$1000
+* Awarded $1000
 
 ### Undergraduate Research Grant -- October 2009
 * Project title: "Development and Benchmarking of Optical Touchscreen User Interface Technology"
-* Awarded \$2250
+* Awarded $2250
 
 ## Employment History:
 
