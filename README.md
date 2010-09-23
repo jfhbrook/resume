@@ -9,7 +9,8 @@ My goal is to have a few different formats available:
 
 In order to compile it yourself, you need waf. Do it like this:
 
-    waf configure
-    waf build --output=<pdf|markdown>
+    waf distclean && waf configure && waf build --output=<pdf|markdown>
 
-which will dump the final compiled document(s) into *resumes/*. The wscript is really crummy, but it seems to work!
+which will dump the final compiled document(s) into *resumes/*. The wscript is really crummy (I plan to revert the waf action), but for now it *kinda* works. ;)
+
+The resume at the moment also tries to support tagging (either engineering or cv at the moment), but it seems somewhat buggy (Plus, every resume should be tailored right?) so I'll probably remove this functionality when I have some spare time.
