@@ -42,7 +42,7 @@
 
 %MAKETITLE
 \renewcommand{\maketitle}{
-\textbf{\Huge \@authorname }\hrule
+\textbf{\Huge \@authorname }\smallskip\hrule
 \smallskip\small \@streetaddress{  }\@citystatezip{ -- } \@phone{ -- }\@email{ -- }\@webpage \normalsize
 
 }
