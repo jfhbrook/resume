@@ -1,0 +1,58 @@
+\documentclass{resume}
+
+\usepackage{paralist}%Squishing bulleted lists
+\usepackage{verbatim}%for the comment environment
+
+%Basically sets \noindent throughout
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0cm}
+
+\input{./whoami.tex}
+
+\begin{document}
+
+\maketitle
+
+\section{Skills and Qualifications:}
+\small
+\begin{itemize}
+    \input{./skills/programming.tex}
+    \input{./skills/markup.tex}
+    \input{./skills/databases.tex}
+    \input{./skills/http.tex}
+    \input{./skills/numerical.tex}
+    \input{./skills/eng_software.tex}
+    \input{./skills/eng_hardware.tex}
+\end{itemize}
+\normalsize
+
+\section{Education:}
+    \input{./education/masters.tex}
+    \input{./education/bachelors.tex}
+    \input{./education/hs.tex}
+
+\section{Projects:}
+    \input{./projects/thesis.tex}
+    \input{./projects/stream_crossings.tex}
+
+\section{Service:}
+    \input{./service/asme.tex}
+        
+\section{Awards \& Grants:}
+    \input{./awards/cgc_thesis.tex}
+    \input{./awards/ugrc_symposium.tex}
+    \input{./awards/ugrc.tex}
+        
+\section{Employment History:}
+    \input{./jobs/nodejitsu_senior.tex}
+    \input{./jobs/nodejitsu_junior.tex}
+    \input{./jobs/ta.tex}
+    \input{./jobs/ra.tex}
+    \input{./jobs/me_oa.tex}
+    \input{./jobs/me_grader.tex}
+    \input{./jobs/conf_srvcs_painter.tex}
+    \input{./jobs/panco.tex}
+    \input{./jobs/werc.tex}
+    \input{./jobs/aramark.tex}
+
+\end{document}

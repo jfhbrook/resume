@@ -1,0 +1,37 @@
+\documentclass{resume}
+
+\usepackage{paralist}%Squishing bulleted lists
+\usepackage{verbatim}%for the comment environment
+
+%Basically sets \noindent throughout
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0cm}
+
+\input{./whoami.tex}
+
+\begin{document}
+
+\maketitle
+
+\section{Skills and Qualifications:}
+\small
+\begin{itemize}
+    \input{./skills/programming.tex}
+    \input{./skills/markup.tex}
+    \input{./skills/databases.tex}
+    \input{./skills/http.tex}
+    \input{./skills/numerical.tex}
+\end{itemize}
+\normalsize
+
+\section{Education:}
+    \input{./education/masters.tex}
+    \input{./education/bachelors.tex}
+        
+\section{Employment History:}
+    \input{./jobs/nodejitsu_senior.tex}
+    \input{./jobs/nodejitsu_junior.tex}
+    \input{./jobs/ta.tex}
+    \input{./jobs/ra.tex}
+
+\end{document}
