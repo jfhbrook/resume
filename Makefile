@@ -1,4 +1,4 @@
-all: software eng_researcher cv
+all: software cv
 
 software:
 	pdflatex resume_software.tex
