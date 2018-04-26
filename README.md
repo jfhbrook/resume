@@ -1,4 +1,5 @@
 # RESUME
 
-* [Resume tailored towards software development [PDF]](https://github.com/jfhbrook/resume/raw/master/resume_software.pdf)
-* [Open Source Software Portfolio](https://github.com/jfhbrook)
+* [One-Page Resume tailored towards software development [PDF]](https://github.com/jfhbrook/resume/raw/master/resume_software.pdf)
+* [My LinkedIn](https://www.linkedin.com/in/joshua-holbrook-27744965/)
+* [My GitHub](https://github.com/jfhbrook)
