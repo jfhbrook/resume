@@ -1,16 +1,14 @@
-all: software cv
+all: resume_software.pdf
 
-software:
+resume_software.pdf:
 	pdflatex resume_software.tex
 
-eng_researcher:
-	pdflatex resume_eng_research.tex
-
-cv:
+resume_all.pdf:
 	pdflatex resume_all.tex
 
 clean: clear
-	rm *.pdf
+	rm -f *.pdf
 
 clear:
-	git clean -xdf
+	rm -f *.aux
+	rm -f *.log
