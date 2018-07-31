@@ -1,10 +1,10 @@
-all: resume_software.pdf
+all: resume.pdf
 
-resume_software.pdf:
-	pdflatex resume_software.tex
+resume.pdf:
+	pdflatex resume.tex
 
-resume_all.pdf:
-	pdflatex resume_all.tex
+cv.pdf:
+	pdflatex cv.tex
 
 clean: clear
 	rm -f *.pdf
