@@ -1,5 +1,7 @@
 % resume.cls
 %
+% Copyright 2019 Joshua Holbrook
+%
 % Modified from resume.cls found at http://people.debian.org/~dburrows/resume-cls.html, 
 % Copyright 2005 Daniel Burrows.
 %
@@ -9,7 +11,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{resume}
 
-\LoadClassWithOptions{article}
+\LoadClassWithOptions{extarticle}
 
 % No page numbers by default.
 \pagestyle{empty}

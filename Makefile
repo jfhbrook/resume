@@ -1,9 +1,9 @@
 all: resume.pdf
 
-resume.pdf:
+resume.pdf: resume.tex
 	pdflatex resume.tex
 
-cv.pdf:
+cv.pdf: cv.tex
 	pdflatex cv.tex
 
 clean: clear
