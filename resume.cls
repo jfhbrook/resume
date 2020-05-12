@@ -80,3 +80,5 @@
   \par
 }%
 %
+
+\newcommand{\skill}[1]{\#{#1}}
