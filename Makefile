@@ -5,10 +5,10 @@ all: resume.pdf
 src: awards/*.tex education/*.tex jobs/*.tex projects/*.tex service/*.tex skills.tex whoami.tex
 
 resume.pdf: resume.tex src
-	pdflatex resume.tex
+	lualatex resume.tex
 
 cv.pdf: cv.tex src
-	pdflatex cv.tex
+	lualatex cv.tex
 
 clean: clear
 	rm -f *.pdf
