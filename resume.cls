@@ -58,11 +58,13 @@
   \@location{ - }\@phone{ - }\@email{ - }\@webpage
 }
 
+
 \renewcommand{\section}[1]{
   \huge
   {#1}
   \normalsize
 }
+
 
 \newlist{@skillslist}{description*}{32}
 \setlist[@skillslist]{itemjoin={{,}}}
@@ -72,6 +74,7 @@
 }{
   \end{@skillslist} \linebreak
 }
+
 
 \newcommand{\@jobemployer}{}
 \newcommand{\@joboffices}{}
@@ -87,14 +90,12 @@
 \definecollection{job}
 
 \newenvironment{accomplishments}{
-  \@nameuse{collect}{job}{\begin{itemize}}{\end{itemize}}{}{}
+  \@nameuse{collect}{job}{\begin{itemize}}{\end{itemize}}
 }{
   \@nameuse{endcollect}
 }
 
-\newenvironment{job}[1]{
-
-}{
+\newenvironment{job}[1]{}{
   \@jobemployer -
   \@joboffices -
   \@jobtitle -
@@ -110,4 +111,26 @@
   \renewcommand{\@jobteam}{}
   \renewcommand{\@fromdate}{}
   \renewcommand{\@todate}{}
+}
+
+
+\newcommand{\@projectname}{}
+
+\newcommand{\projectname}[1]{\renewcommand{\@projectname}{#1}}
+
+\definecollection{project}
+
+\newenvironment{projectdescription}{
+  \@nameuse{collect}{project}{}{}
+}{
+  \@nameuse{endcollect}
+}
+
+\newenvironment{project}{}{
+  \@projectname :
+  \@fromdate - \@todate
+
+  \includecollection{project}
+
+  \renewcommand{\@projectname}{}
 }
