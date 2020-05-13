@@ -2,12 +2,14 @@
 
 all: resume.pdf
 
-src: awards/*.tex education/*.tex jobs/*.tex projects/*.tex service/*.tex skills.tex whoami.tex
+src: awards/*.tex education/*.tex jobs/*.tex projects/*.tex service/*.tex skills/*.tex whoami.tex
 
 resume.pdf: resume.tex src
 	lualatex resume.tex
+	lualatex resume.tex
 
 cv.pdf: cv.tex src
+	lualatex cv.tex
 	lualatex cv.tex
 
 clean: clear
