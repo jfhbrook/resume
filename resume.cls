@@ -27,14 +27,15 @@
 
 \LoadClassWithOptions{extarticle}
 
-\RequirePackage[inline]{enumitem}
-\RequirePackage{booktabs}
 \RequirePackage{collect}
+\RequirePackage[inline]{enumitem}
 \RequirePackage{fontspec}
-
-\RequirePackage{calc}
-\RequirePackage{ifthen}
 \RequirePackage{geometry}
+\RequirePackage{hyperref}
+\RequirePackage{ifthen}
+
+% \RequirePackage{booktabs}
+% \RequirePackage{calc}
 
 \pagestyle{empty}
 \setlength{\parindent}{0em}
@@ -55,17 +56,19 @@
 \renewcommand{\author}[1]{\renewcommand{\@author}{#1}}
 \newcommand{\location}[1]{\renewcommand{\@location}{#1}}
 \newcommand{\phone}[1]{\renewcommand{\@phone}{#1}}
-\newcommand{\email}[1]{\renewcommand{\@email}{#1}}
-\newcommand{\webpage}[1]{\renewcommand{\@webpage}{#1}}
+\newcommand{\email}[1]{\renewcommand{\@email}{\href{mailto:#1}{#1}}}
+\newcommand{\webpage}[1]{\renewcommand{\@webpage}{\href{#1}{#1}}}
 
 \renewcommand{\maketitle}{
-  \Huge\textsf{\textbf{\@author}} \normalsize \smallskip \\
-  \@location{ - }\@phone{ - }\@email{ - }\@webpage
+  \Huge \textsf{\textbf{\@author}} \normalsize \smallskip \hrule
+  \small \textsf{\textbf{\@location{ - }\@phone{ - }\@email{ - }\@webpage}} \normalsize
 }
 
 
 \renewcommand{\section}[1]{
-  \huge
+  \goodbreak
+  \vspace{1em}
+  \Large
   \textsf{\textbf{#1}}
   \normalsize
   \hfill \\
