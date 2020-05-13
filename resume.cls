@@ -30,12 +30,17 @@
 \RequirePackage[inline]{enumitem}
 \RequirePackage{booktabs}
 \RequirePackage{collect}
+\RequirePackage{fontspec}
+
 \RequirePackage{calc}
 \RequirePackage{ifthen}
 \RequirePackage{geometry}
 
 \pagestyle{empty}
 \setlength{\parindent}{0em}
+\setmainfont[Ligatures=TeX]{Merriweather}
+\setsansfont[Ligatures=TeX]{Montserrat}
+\setmonofont[Ligatures=TeX]{mononoki}
 
 \newcommand{\@fromdate}[1]{{#1}}
 \newcommand{\@todate}[1]{{#1}}
@@ -54,14 +59,14 @@
 \newcommand{\webpage}[1]{\renewcommand{\@webpage}{#1}}
 
 \renewcommand{\maketitle}{
-  \Huge \@author \normalsize \smallskip \\
+  \Huge\textsf{\textbf{\@author}} \normalsize \smallskip \\
   \@location{ - }\@phone{ - }\@email{ - }\@webpage
 }
 
 
 \renewcommand{\section}[1]{
   \huge
-  {#1}
+  \textsf{\textbf{#1}}
   \normalsize
   \hfill \\
 }
@@ -71,7 +76,8 @@
 \setlist[@skillslist]{itemjoin={{,}}}
 
 \newenvironment{skillset}[1]{
-  \textbf{{{#1}}}: \begin{@skillslist}
+  \textbf{{{#1}}} \\
+  \begin{@skillslist}
 }{
   \end{@skillslist} \\
 }
