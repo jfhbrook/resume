@@ -19,7 +19,7 @@
 % SOFTWARE.
 %
 % Some parts of the API are influenced by a previously used resume class
-% originall found at http://people.debian.org/~dburrows/resume-cls.html and
+% originally found at http://people.debian.org/~dburrows/resume-cls.html and
 % copyright 2005 Daniel Burrows.
 
 \NeedsTeXFormat{LaTeX2e}
