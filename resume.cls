@@ -45,7 +45,9 @@
 
 \newcommand{\@fromdate}[1]{{#1}}
 \newcommand{\@todate}[1]{{#1}}
-\newcommand{\dates}[2][]{\renewcommand{\@fromdate}[1]{{#1}}\renewcommand{\@todate}[1]{{#2}}}
+\newcommand{\dates}[2][]{\renewcommand{\@fromdate}{#1}\renewcommand{\@todate}{#2}}
+
+\newcommand{\makedaterange}{\@fromdate \ifthenelse{\equal{\@fromdate}{}}{}{ - }\@todate}
 
 \renewcommand{\@author}{}
 \newcommand{\@location}{}
@@ -60,7 +62,8 @@
 \newcommand{\webpage}[1]{\renewcommand{\@webpage}{\href{#1}{#1}}}
 
 \renewcommand{\maketitle}{
-  \Huge \textsf{\textbf{\@author}} \normalsize \smallskip \hrule
+  \Huge \textsf{\textbf{\@author}} \normalsize
+  \medskip \hrule \smallskip
   \small \textsf{\textbf{\@location{ - }\@phone{ - }\@email{ - }\@webpage}} \normalsize
 }
 
@@ -68,21 +71,8 @@
 \renewcommand{\section}[1]{
   \goodbreak
   \vspace{1em}
-  \Large
-  \textsf{\textbf{#1}}
-  \normalsize
-  \hfill \\
-}
-
-
-\newlist{@skillslist}{description*}{32}
-\setlist[@skillslist]{itemjoin={{,}}}
-
-\newenvironment{skillset}[1]{
-  \textbf{{{#1}}} \\
-  \begin{@skillslist}
-}{
-  \end{@skillslist} \\
+  \Large\textsf{\textbf{#1}}\normalsize
+  \smallskip\hrule\medskip
 }
 
 
@@ -105,13 +95,9 @@
   \@nameuse{endcollect}
 }
 
-\newenvironment{job}[1]{}{
-  \textbf{\@jobemployer} -
-  \@joboffices -
-  \@jobtitle -
-  \@jobteam -
-  \@fromdate -
-  \@todate
+\newenvironment{job}{}{
+  \textbf{\textsf{\@jobtitle \hfill \makedaterange}} \\
+  \small \textbf{\textsf{\@jobemployer, \@jobteam\hfill\@joboffices}} \normalsize
 
   \includecollection{job}
 
@@ -158,6 +144,18 @@
 \newcommand{\minor}[1]{\renewcommand{\@minor}{#1}}
 \newcommand{\thesis}[1]{\renewcommand{\@thesis}{#1}}
 \newcommand{\gpa}[1]{\renewcommand{\@gpa}{#1}}
+
+
+\newlist{@skillslist}{description*}{32}
+\setlist[@skillslist]{itemjoin={{,}}}
+
+\newenvironment{skillset}[1]{
+  \textbf{{{#1}}} \\
+  \begin{@skillslist}
+}{
+  \end{@skillslist} \\
+}
+
 
 \newenvironment{education}{}
 {
