@@ -63,6 +63,7 @@
   \huge
   {#1}
   \normalsize
+  \hfill \\
 }
 
 
@@ -72,7 +73,7 @@
 \newenvironment{skillset}[1]{
   \textbf{{{#1}}}: \begin{@skillslist}
 }{
-  \end{@skillslist} \linebreak
+  \end{@skillslist} \\
 }
 
 
@@ -96,7 +97,7 @@
 }
 
 \newenvironment{job}[1]{}{
-  \@jobemployer -
+  \textbf{\@jobemployer} -
   \@joboffices -
   \@jobtitle -
   \@jobteam -
@@ -127,10 +128,29 @@
 }
 
 \newenvironment{project}{}{
-  \@projectname :
+  \textbf{\@projectname} -
   \@fromdate - \@todate
 
   \includecollection{project}
 
   \renewcommand{\@projectname}{}
+}
+
+\newcommand{\@institution}{}
+\newcommand{\@degree}{}
+\newcommand{\@major}{}
+\newcommand{\@minor}{}
+\newcommand{\@thesis}{}
+\newcommand{\@gpa}{}
+
+\newcommand{\institution}[1]{\renewcommand{\@institution}{#1}}
+\newcommand{\degree}[1]{\renewcommand{\@degree}{#1}}
+\newcommand{\major}[1]{\renewcommand{\@major}{#1}}
+\newcommand{\minor}[1]{\renewcommand{\@minor}{#1}}
+\newcommand{\thesis}[1]{\renewcommand{\@thesis}{#1}}
+\newcommand{\gpa}[1]{\renewcommand{\@gpa}{#1}}
+
+\newenvironment{education}{}
+{
+  \@institution - \@fromdate - \@todate - \@degree in \@major (gpa \@gpa)
 }
