@@ -30,7 +30,7 @@
 \RequirePackage{collect}
 \RequirePackage[inline]{enumitem}
 \RequirePackage{fontspec}
-\RequirePackage{geometry}
+\RequirePackage[tmargin=0.75in,bmargin=0.75in,lmargin=0.875in,rmargin=0.875in]{geometry}
 \RequirePackage{hyperref}
 \RequirePackage{ifthen}
 
@@ -64,7 +64,7 @@
 \renewcommand{\maketitle}{
   \Huge \textsf{\textbf{\@author}} \normalsize
   \medskip \hrule \smallskip
-  \small \textsf{\textbf{\@location{ - }\@phone{ - }\@email{ - }\@webpage}} \normalsize
+  \small \textsf{\@location{ - }\@phone{ - }\@email{ - }\@webpage} \normalsize
 }
 
 
@@ -72,7 +72,7 @@
   \goodbreak
   \vspace{1em}
   \Large\textsf{\textbf{#1}}\normalsize
-  \smallskip\hrule\medskip
+  \medskip
 }
 
 
@@ -90,14 +90,14 @@
 \definecollection{job}
 
 \newenvironment{accomplishments}{
-  \@nameuse{collect}{job}{\begin{itemize}}{\end{itemize}}
+  \@nameuse{collect}{job}{\begin{itemize}[itemsep=0em,leftmargin=1em]}{\end{itemize}}
 }{
   \@nameuse{endcollect}
 }
 
 \newenvironment{job}{}{
-  \textbf{\textsf{\@jobtitle \hfill \makedaterange}} \\
-  \small \textbf{\textsf{\@jobemployer, \@jobteam\hfill\@joboffices}} \normalsize
+  \large \textsf{\@jobtitle \hfill \makedaterange} \normalsize \\
+  \textsf{\@jobemployer, \@jobteam\hfill\@joboffices}
 
   \includecollection{job}
 
