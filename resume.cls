@@ -20,7 +20,7 @@
 %
 % Some parts of the API are influenced by a previously used resume class
 % originally found at http://people.debian.org/~dburrows/resume-cls.html and
-% copyright 2005 Daniel Burrows.
+% copyright 2005 Daniel Burrows but no meaningful code is shared.
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{resume}
