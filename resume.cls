@@ -63,8 +63,7 @@
 \newcommand{\webpage}[1]{\renewcommand{\@webpage}{\href{#1}{#1}}}
 
 \renewcommand{\maketitle}{
-  \Huge \textsf{\textbf{\@author}} \normalsize
-  \medskip \hrule \smallskip
+  \Huge \textsf{\textbf{\@author}} \normalsize \\
   \small \textsf{\@location{ - }\@phone{ - }\@email{ - }\@webpage} \normalsize
 }
 
