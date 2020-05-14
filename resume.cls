@@ -152,14 +152,12 @@
 
 \newenvironment{project}{}{
   \goodbreak
-
   \large
   \textsf{
     \ifthenelse{\equal{\@projecturl}{}}{\@projectname}{\href{\@projecturl}{\@projectname}}
     \ifthenelse{\equal{\@stars}{}}{}{\hspace{2pt}\(\bigstar\)\hspace{-1pt}\@stars}
     \hfill
   \makedaterange} \normalsize
-
   \smallskip
 
   \includecollection{project}
@@ -173,13 +171,14 @@
 }
 
 \newlist{@skillslist}{description*}{32}
-\setlist[@skillslist]{itemjoin={{,}}}
+\setlist[@skillslist]{itemjoin={{,}},itemsep=1em,afterlabel=\unskip{{~}}}
+
 
 \newenvironment{skillset}[1]{
-  \textbf{{{#1}}} \\
-  \begin{@skillslist}
+  \sffamily
+  \textbf{#1:}\hspace{2px} \begin{@skillslist}
 }{
-  \end{@skillslist} \\
+\end{@skillslist}\rmfamily\smallskip\\
 }
 
 
@@ -201,8 +200,22 @@
 
 \newenvironment{education}{}
 {
-  \@institution - \@fromdate - \@todate - \@degree in \@major (gpa \@gpa)
+  \goodbreak
+  \large
+  \textsf{\@degree, \@institution \hfill \makedaterange}
+  \normalsize \\
+  \textsf{
+    \ifthenelse{\equal{\@major}{}}{}{Major: \@major}
+    \ifthenelse{\equal{\@minor}{}}{}{Minor: \@minor}
+    \ifthenelse{\equal{\@gpa}{}}{}{\hfill GPA: \@gpa}
+  }
 
+  \renewcommand{\@institution}{}
+  \renewcommand{\@degree}{}
+  \renewcommand{\@major}{}
+  \renewcommand{\@minor}{}
+  \renewcommand{\@thesis}{}
+  \renewcommand{\@gpa}{}
   \renewcommand{\@fromdate}{}
   \renewcommand{\@todate}{}
 }
