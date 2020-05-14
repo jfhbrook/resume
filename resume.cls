@@ -27,6 +27,7 @@
 
 \LoadClassWithOptions{extarticle}
 
+\RequirePackage{amssymb}
 \RequirePackage{collect}
 \RequirePackage[inline]{enumitem}
 \RequirePackage{fontspec}
@@ -59,23 +60,29 @@
 \newcommand{\@phone}{}
 \newcommand{\@email}{}
 \newcommand{\@webpage}{}
+\newcommand{\@github}{}
 
 \renewcommand{\author}[1]{\renewcommand{\@author}{#1}}
 \newcommand{\location}[1]{\renewcommand{\@location}{#1}}
 \newcommand{\phone}[1]{\renewcommand{\@phone}{#1}}
 \newcommand{\email}[1]{\renewcommand{\@email}{\href{mailto:#1}{#1}}}
 \newcommand{\webpage}[1]{\renewcommand{\@webpage}{\href{#1}{#1}}}
+\newcommand{\github}[1]{\renewcommand{\@github}{#1}}
+
 
 \renewcommand{\maketitle}{
   \Huge \textsf{\textbf{\@author}} \normalsize \\
   \small \textsf{\@location{ - }\@phone{ - }\@email{ - }\@webpage} \normalsize
 }
 
+\newcommand{\makegithub}{\href{https://github.com/\@github}{GitHub: @\@github}}
 
-\renewcommand{\section}[1]{
+\renewcommand{\section}[2][]{
   \goodbreak
   \vspace{1em}
-  \Large\textsf{\textbf{#1}}\normalsize
+  \Large
+  \textsf{\textbf{#2}\ifthenelse{\equal{#1}{}}{}{\hfill \textit{#1}}}
+  \normalsize
   \medskip
 }
 
@@ -128,8 +135,12 @@
 
 
 \newcommand{\@projectname}{}
+\newcommand{\@projecturl}{}
+\newcommand{\@stars}{}
 
 \newcommand{\projectname}[1]{\renewcommand{\@projectname}{#1}}
+\newcommand{\projecturl}[1]{\renewcommand{\@projecturl}{#1}}
+\newcommand{\stars}[1]{\renewcommand{\@stars}{#1}}
 
 \definecollection{project}
 
@@ -140,12 +151,23 @@
 }
 
 \newenvironment{project}{}{
-  \textbf{\@projectname} -
-  \@fromdate - \@todate
+  \goodbreak
+
+  \large
+  \textsf{
+    \ifthenelse{\equal{\@projecturl}{}}{\@projectname}{\href{\@projecturl}{\@projectname}}
+    \ifthenelse{\equal{\@stars}{}}{}{\hspace{2pt}\(\bigstar\)\hspace{-1pt}\@stars}
+    \hfill
+  \makedaterange} \normalsize
+
+  \smallskip
 
   \includecollection{project}
 
+  \medskip
+
   \renewcommand{\@projectname}{}
+  \renewcommand{\@projecturl}{}
   \renewcommand{\@fromdate}{}
   \renewcommand{\@todate}{}
 }
