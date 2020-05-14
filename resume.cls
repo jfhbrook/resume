@@ -34,6 +34,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{ifthen}
 
+% \RequirePackage{comment}
 % \RequirePackage{booktabs}
 % \RequirePackage{calc}
 
@@ -90,16 +91,19 @@
 \definecollection{job}
 
 \newenvironment{accomplishments}{
-  \@nameuse{collect}{job}{\begin{itemize}[itemsep=0em,leftmargin=1em]}{\end{itemize}}
+  \@nameuse{collect}{job}{\begin{itemize}[parsep=1pt,itemsep=0pt,leftmargin=10pt]}{\end{itemize}}
 }{
   \@nameuse{endcollect}
 }
 
 \newenvironment{job}{}{
+  \goodbreak
   \large \textsf{\@jobtitle \hfill \makedaterange} \normalsize \\
-  \textsf{\@jobemployer, \@jobteam\hfill\@joboffices}
+  \textsf{\@jobemployer\ifthenelse{\equal{\@jobteam}{}}{}{, }\@jobteam\hfill\@joboffices}
 
   \includecollection{job}
+
+  \smallskip
 
   \renewcommand{\@jobemployer}{}
   \renewcommand{\@joboffices}{}
