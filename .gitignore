@@ -3,6 +3,8 @@
 *.~
 .auctex-auto
 cv.pdf
-resume.job
-resume.out
-resume.project
+*.job
+*.extendedjob
+*.out
+*.project
+everything.*
