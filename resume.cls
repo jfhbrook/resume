@@ -34,7 +34,6 @@
 \RequirePackage{hyperref}
 \RequirePackage{ifthen}
 
-% \RequirePackage{comment}
 % \RequirePackage{booktabs}
 % \RequirePackage{calc}
 
@@ -43,6 +42,11 @@
 \setmainfont[Ligatures=TeX]{Merriweather}
 \setsansfont[Ligatures=TeX]{Montserrat}
 \setmonofont[Ligatures=TeX]{mononoki}
+
+\newcommand{\@extendedcv}{0}
+\newcommand{\extendedcv}{
+  \renewcommand{\@extendedcv}{1}
+}
 
 \newcommand{\@fromdate}[1]{{#1}}
 \newcommand{\@todate}[1]{{#1}}
@@ -88,11 +92,18 @@
 \newcommand{\team}[1]{\renewcommand{\@jobteam}{#1}}
 
 \definecollection{job}
+\definecollection{extendedjob}
 
 \newenvironment{accomplishments}{
-  \@nameuse{collect}{job}{\begin{itemize}[parsep=1pt,itemsep=0pt,leftmargin=10pt]}{\end{itemize}}
+  \@nameuse{collect}{job}{\begin{itemize}[topsep=0pt,parsep=1pt,itemsep=0pt,leftmargin=10pt]}{\end{itemize}}
 }{
   \@nameuse{endcollect}
+}
+
+\newenvironment{extendedaccomplishments}{
+    \@nameuse{collect}{extendedjob}{\begin{itemize}[topsep=0pt,parsep=1pt,itemsep=0pt,leftmargin=10pt]}{\end{itemize}}
+}{
+    \@nameuse{endcollect}
 }
 
 \newenvironment{job}{}{
@@ -100,7 +111,10 @@
   \large \textsf{\@jobtitle \hfill \makedaterange} \normalsize \\
   \textsf{\@jobemployer\ifthenelse{\equal{\@jobteam}{}}{}{, }\@jobteam\hfill\@joboffices}
 
+  \smallskip
+ 
   \includecollection{job}
+  \ifthenelse{\@extendedcv > 0}{\includecollection{extendedjob}}{}
 
   \smallskip
 
@@ -132,22 +146,9 @@
   \includecollection{project}
 
   \renewcommand{\@projectname}{}
+  \renewcommand{\@fromdate}{}
+  \renewcommand{\@todate}{}
 }
-
-\newcommand{\@institution}{}
-\newcommand{\@degree}{}
-\newcommand{\@major}{}
-\newcommand{\@minor}{}
-\newcommand{\@thesis}{}
-\newcommand{\@gpa}{}
-
-\newcommand{\institution}[1]{\renewcommand{\@institution}{#1}}
-\newcommand{\degree}[1]{\renewcommand{\@degree}{#1}}
-\newcommand{\major}[1]{\renewcommand{\@major}{#1}}
-\newcommand{\minor}[1]{\renewcommand{\@minor}{#1}}
-\newcommand{\thesis}[1]{\renewcommand{\@thesis}{#1}}
-\newcommand{\gpa}[1]{\renewcommand{\@gpa}{#1}}
-
 
 \newlist{@skillslist}{description*}{32}
 \setlist[@skillslist]{itemjoin={{,}}}
@@ -160,7 +161,62 @@
 }
 
 
+\newcommand{\@institution}{}
+\newcommand{\@degree}{}
+\newcommand{\@major}{}
+\newcommand{\@minor}{}
+\newcommand{\@thesis}{}
+\newcommand{\@honor}{}
+\newcommand{\@gpa}{}
+
+\newcommand{\institution}[1]{\renewcommand{\@institution}{#1}}
+\newcommand{\degree}[1]{\renewcommand{\@degree}{#1}}
+\newcommand{\major}[1]{\renewcommand{\@major}{#1}}
+\newcommand{\minor}[1]{\renewcommand{\@minor}{#1}}
+\newcommand{\thesis}[1]{\renewcommand{\@thesis}{#1}}
+\newcommand{\honor}[1]{\renewcommand{\@honor}{#1}}
+\newcommand{\gpa}[1]{\renewcommand{\@gpa}{#1}}
+
 \newenvironment{education}{}
 {
   \@institution - \@fromdate - \@todate - \@degree in \@major (gpa \@gpa)
+
+  \renewcommand{\@fromdate}{}
+  \renewcommand{\@todate}{}
+}
+
+
+\newcommand{\@awardname}{}
+\newcommand{\@awardamount}{}
+
+\newcommand{\awardname}[1]{\renewcommand{\@awardname}{#1}}
+\newcommand{\awardamount}[1]{\renewcommand{\@awardamount}{#1}}
+
+\newenvironment{award}{}{
+  \renewcommand{\@awardname}{}
+  \renewcommand{\@projectname}{}
+  \renewcommand{\@awardamount}{}
+
+  \renewcommand{\@fromdate}{}
+  \renewcommand{\@todate}{}
+}
+
+
+\newcommand{\@organization}{}
+
+\newcommand{\organization}[1]{\renewcommand{\@organization}{#1}}
+
+\definecollection{service}
+
+\newenvironment{servicedescription}{
+  \@nameuse{collect}{service}{}{}
+}{
+  \@nameuse{endcollect}
+}
+
+\newenvironment{service}{}{
+  \renewcommand{\@organization}{}
+
+  \renewcommand{\@fromdate}{}
+  \renewcommand{\@todate}{}
 }
