@@ -2,7 +2,7 @@
 *.aux
 *.~
 .auctex-auto
-cv.pdf
+everything.pdf
 *.job
 *.extendedjob
 *.out
