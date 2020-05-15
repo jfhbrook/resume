@@ -35,9 +35,6 @@
 \RequirePackage{hyperref}
 \RequirePackage{ifthen}
 
-% \RequirePackage{booktabs}
-% \RequirePackage{calc}
-
 \pagestyle{empty}
 \setlength{\parindent}{0em}
 \setmainfont[Ligatures=TeX]{Merriweather}
@@ -73,12 +70,7 @@
 }
 
 \renewcommand{\section}[1]{
-  \goodbreak
-  \vspace{1em}
-  \Large
-  \textsf{\textbf{#1}}
-  \normalsize
-  \medskip
+  \goodbreak\vspace{1em}\Large\textsf{\textbf{#1}}\normalsize\medskip
 }
 
 
@@ -103,9 +95,9 @@
 }
 
 \newenvironment{extendedaccomplishments}{
-    \@nameuse{collect}{extendedjob}{\begin{itemize}[topsep=0pt,parsep=1pt,itemsep=0pt,leftmargin=10pt]}{\end{itemize}}
+\@nameuse{collect}{extendedjob}{\begin{itemize}[topsep=0pt,parsep=1pt,itemsep=0pt,leftmargin=10pt]}{\end{itemize}}
 }{
-    \@nameuse{endcollect}
+  \@nameuse{endcollect}
 }
 
 \newenvironment{job}{}{ \goodbreak
@@ -127,8 +119,8 @@
   \renewcommand{\@jobteam}{}
   \renewcommand{\@fromdate}{}
   \renewcommand{\@todate}{}
+  \begin{collect}{extendedjob}{}{}\end{collect}
 }
-
 
 \newcommand{\@projectname}{}
 \newcommand{\@projecturl}{}
@@ -195,10 +187,10 @@
 {
   \goodbreak
   \large
-  \@degree\ifthenelse{\equal{\@major}{}}{}{, \@major} \hfill \makedaterange
-  \normalsize \\
-  \@institution\ifthenelse{\equal{\@gpa}{}}{}{\hfill GPA: \@gpa}
-  \ifthenelse{\equal{\@minor}{}}{}{\smallskip Minor: \@minor}
+  \@degree\ifthenelse{\equal{\@major}{}}{}{,
+    \@major}\ifthenelse{\equal{\@minor}{}}{}{(Minor: \@minor)} \hfill \makedaterange \normalsize \\
+  \@institution\ifthenelse{\equal{\@gpa}{}}{}{\hfill GPA: \@gpa} \\
+  \ifthenelse{\equal{\@thesis}{}}{\smallskip}{\smallskip Thesis: \textit{\@thesis}\medskip}
 
   \renewcommand{\@institution}{}
   \renewcommand{\@degree}{}
@@ -218,6 +210,11 @@
 \newcommand{\awardamount}[1]{\renewcommand{\@awardamount}{#1}}
 
 \newenvironment{award}{}{
+  \goodbreak
+  \large\@awardname\hfill\makedaterange\normalsize\\
+  \ifthenelse{\equal{\@projectname}{}}{}{Project: \textit{\@projectname}\\}
+  \ifthenelse{\equal{\@awardamount}{}}{}{Award: \textit{\@awardamount}\\}
+
   \renewcommand{\@awardname}{}
   \renewcommand{\@projectname}{}
   \renewcommand{\@awardamount}{}
@@ -240,6 +237,12 @@
 }
 
 \newenvironment{service}{}{
+  \goodbreak
+  \large\@organization \hfill \makedaterange\normalsize
+  \smallskip
+  \includecollection{service}
+  \medskip
+
   \renewcommand{\@organization}{}
 
   \renewcommand{\@fromdate}{}
