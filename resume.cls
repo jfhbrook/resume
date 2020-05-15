@@ -69,7 +69,7 @@
 
 \renewcommand{\maketitle}{
   \Huge \textsf{\textbf{\@author}} \normalsize \\
-  \small \textsf{\@location{ - }\@phone{ - }\@email{ - }\@webpage} \normalsize
+  \small \@location{ - }\@phone{ - }\@email{ - }\@webpage \normalsize
 }
 
 \renewcommand{\section}[1]{
@@ -109,10 +109,10 @@
 }
 
 \newenvironment{job}{}{ \goodbreak
-  \large \textsf{\@jobemployer\ifthenelse{\equal{\@jobteam}{}}{}{, }\@jobteam\hfill
+  \large \@jobemployer\ifthenelse{\equal{\@jobteam}{}}{}{, }\@jobteam\hfill
     \makedaterange
-  } \normalsize \\
-  \textsf{\@jobtitle\hfill\@joboffices}
+  \normalsize \\
+  \@jobtitle\hfill\@joboffices
 
   \smallskip
  
@@ -149,9 +149,9 @@
 \newenvironment{project}{}{
   \goodbreak
   \large
-  \textsf{\ifthenelse{\equal{\@projecturl}{}}{\@projectname}{\href{\@projecturl}{\@projectname}}\ifthenelse{\equal{\@stars}{}}{}{\hspace{2pt}\(\bigstar\)\hspace{-1pt}\@stars}
+  \ifthenelse{\equal{\@projecturl}{}}{\@projectname}{\href{\@projecturl}{\@projectname}}\ifthenelse{\equal{\@stars}{}}{}{\hspace{2pt}\(\bigstar\)\hspace{-1pt}\@stars}
     \hfill
-  \makedaterange} \normalsize
+  \makedaterange \normalsize
   \smallskip
 
   \includecollection{project}
@@ -169,10 +169,9 @@
 
 
 \newenvironment{skillset}[1]{
-  \sffamily
   \textbf{#1:}\hspace{2px} \begin{@skillslist}
 }{
-\end{@skillslist}\rmfamily\smallskip\\
+\end{@skillslist}\smallskip\\
 }
 
 
@@ -196,9 +195,9 @@
 {
   \goodbreak
   \large
-  \textsf{\@degree\ifthenelse{\equal{\@major}{}}{}{, \@major} \hfill \makedaterange}
+  \@degree\ifthenelse{\equal{\@major}{}}{}{, \@major} \hfill \makedaterange
   \normalsize \\
-  \textsf{\@institution\ifthenelse{\equal{\@gpa}{}}{}{\hfill GPA: \@gpa}}
+  \@institution\ifthenelse{\equal{\@gpa}{}}{}{\hfill GPA: \@gpa}
   \ifthenelse{\equal{\@minor}{}}{}{\smallskip Minor: \@minor}
 
   \renewcommand{\@institution}{}
