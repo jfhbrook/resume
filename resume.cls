@@ -60,28 +60,23 @@
 \newcommand{\@phone}{}
 \newcommand{\@email}{}
 \newcommand{\@webpage}{}
-\newcommand{\@github}{}
 
 \renewcommand{\author}[1]{\renewcommand{\@author}{#1}}
 \newcommand{\location}[1]{\renewcommand{\@location}{#1}}
 \newcommand{\phone}[1]{\renewcommand{\@phone}{#1}}
 \newcommand{\email}[1]{\renewcommand{\@email}{\href{mailto:#1}{#1}}}
 \newcommand{\webpage}[1]{\renewcommand{\@webpage}{\href{#1}{#1}}}
-\newcommand{\github}[1]{\renewcommand{\@github}{#1}}
-
 
 \renewcommand{\maketitle}{
   \Huge \textsf{\textbf{\@author}} \normalsize \\
   \small \textsf{\@location{ - }\@phone{ - }\@email{ - }\@webpage} \normalsize
 }
 
-\newcommand{\makegithub}{\href{https://github.com/\@github}{GitHub: @\@github}}
-
-\renewcommand{\section}[2][]{
+\renewcommand{\section}[1]{
   \goodbreak
   \vspace{1em}
   \Large
-  \textsf{\textbf{#2}\ifthenelse{\equal{#1}{}}{}{\hfill \textit{#1}}}
+  \textsf{\textbf{#1}}
   \normalsize
   \medskip
 }
@@ -113,10 +108,12 @@
     \@nameuse{endcollect}
 }
 
-\newenvironment{job}{}{
-  \goodbreak
-  \large \textsf{\@jobtitle \hfill \makedaterange} \normalsize \\
-  \textsf{\@jobemployer\ifthenelse{\equal{\@jobteam}{}}{}{, }\@jobteam\hfill\@joboffices}
+\newenvironment{job}{}{ \goodbreak
+  \large \textsf{
+    \@jobemployer\ifthenelse{\equal{\@jobteam}{}}{}{, }\@jobteam\hfill
+    \makedaterange
+  } \normalsize \\
+  \textsf{\@jobtitle\hfill\@joboffices}
 
   \smallskip
  
