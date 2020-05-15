@@ -196,13 +196,10 @@
 {
   \goodbreak
   \large
-  \textsf{\@degree, \@institution \hfill \makedaterange}
+  \textsf{\@degree\ifthenelse{\equal{\@major}{}}{}{, \@major} \hfill \makedaterange}
   \normalsize \\
-  \textsf{
-    \ifthenelse{\equal{\@major}{}}{}{Major: \@major}
-    \ifthenelse{\equal{\@minor}{}}{}{Minor: \@minor}
-    \ifthenelse{\equal{\@gpa}{}}{}{\hfill GPA: \@gpa}
-  }
+  \textsf{\@institution\ifthenelse{\equal{\@gpa}{}}{}{\hfill GPA: \@gpa}}
+  \ifthenelse{\equal{\@minor}{}}{}{\smallskip Minor: \@minor}
 
   \renewcommand{\@institution}{}
   \renewcommand{\@degree}{}
