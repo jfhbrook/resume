@@ -109,8 +109,7 @@
 }
 
 \newenvironment{job}{}{ \goodbreak
-  \large \textsf{
-    \@jobemployer\ifthenelse{\equal{\@jobteam}{}}{}{, }\@jobteam\hfill
+  \large \textsf{\@jobemployer\ifthenelse{\equal{\@jobteam}{}}{}{, }\@jobteam\hfill
     \makedaterange
   } \normalsize \\
   \textsf{\@jobtitle\hfill\@joboffices}
