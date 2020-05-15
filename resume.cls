@@ -149,9 +149,7 @@
 \newenvironment{project}{}{
   \goodbreak
   \large
-  \textsf{
-    \ifthenelse{\equal{\@projecturl}{}}{\@projectname}{\href{\@projecturl}{\@projectname}}
-    \ifthenelse{\equal{\@stars}{}}{}{\hspace{2pt}\(\bigstar\)\hspace{-1pt}\@stars}
+  \textsf{\ifthenelse{\equal{\@projecturl}{}}{\@projectname}{\href{\@projecturl}{\@projectname}}\ifthenelse{\equal{\@stars}{}}{}{\hspace{2pt}\(\bigstar\)\hspace{-1pt}\@stars}
     \hfill
   \makedaterange} \normalsize
   \smallskip
