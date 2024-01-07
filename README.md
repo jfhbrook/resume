@@ -38,8 +38,6 @@ To build the Docker image, run `just build`.
 
 - `just make resume.pdf` - Build the one-page resume
 - `just make cv.pdf` - Build the extended CV
-- `just make everything.pdf` - Build a document that includes everything I've
-  ever done, since childhood
 
 ### Cleanup
 
