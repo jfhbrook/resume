@@ -17,6 +17,8 @@ a lot of space.
 
 - [just](https://github.com/casey/just)
   - with cargo: `cargo install just`
+- [watchexec](https://github.com/watchexec/watchexec)
+  - with cargo: `rustup run nightly cargo install watchexec-cli`
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - A PDF viewer - this will be OS dependent
 
