@@ -1,0 +1,10 @@
+*.log
+*.aux
+*.~
+.auctex-auto
+everything.pdf
+*.job
+*.extendedjob
+*.out
+*.project
+everything.*
