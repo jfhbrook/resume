@@ -13,6 +13,7 @@ build:
   docker build . -t resume-builder
   
 clean:
+  docker run -it -v "$(pwd):/opt/resume" resume-builder clean
   docker system prune -f
   docker rmi resume-builder
   docker system prune -f

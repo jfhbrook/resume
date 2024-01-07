@@ -10,9 +10,6 @@ resume.pdf: resume.tex src
 cv.pdf: cv.tex src
 	lualatex cv.tex
 
-everything.pdf: everything.tex src
-	lualatex everything.tex
-
 clean: clear
 	rm -f *.pdf
 
