@@ -13,5 +13,5 @@ build:
   docker build . -t resume-builder
   
 clean:
-  docker rmi resume-builder
   docker system prune
+  docker rmi resume-builder
