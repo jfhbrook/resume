@@ -30,9 +30,10 @@ To build the Docker image, run `just build`.
 
 1. Run `just watch` to get Docker to watch all `.tex` files and run the build on
    save.
-2. Open `resume.pdf` and `cv.pdf`. Most PDF viewers will automatically refresh
-   whenever the file changes.
-3. When you're done, commit and push
+2. Open `resume.pdf` and `cv.pdf`. Many PDF viewers in Linux and MacOS will
+   automatically refresh whenever the file changes. Unfortunately, this is
+   not as common in Windows.
+3. When you're done, commit and push.
    
 ### Build Individual PDFs
 
