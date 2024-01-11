@@ -1,7 +1,7 @@
 set windows-shell := ['pwsh', '-Command']
 
 watch:
-  watchexec -e .tex docker run -it -v "$(pwd):/opt/resume" resume-builder
+  watchexec -e tex,cls docker run -it -v "$(pwd):/opt/resume" resume-builder
   
 make *ARGS:
   docker run -it -v "$(pwd):/opt/resume" resume-builder {{ARGS}}

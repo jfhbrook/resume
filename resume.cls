@@ -190,7 +190,7 @@
   \goodbreak
   \large
   \@degree\ifthenelse{\equal{\@major}{}}{}{,
-    \@major}\ifthenelse{\equal{\@minor}{}}{}{(Minor: \@minor)} \hfill \makedaterange \normalsize \\
+    \@major}\ifthenelse{\equal{\@minor}{}}{}{\hspace{3px}(Minor: \@minor)} \hfill \makedaterange \normalsize \\
   \@institution\ifthenelse{\equal{\@gpa}{}}{}{\hfill GPA: \@gpa} \\
   \ifthenelse{\equal{\@thesis}{}}{\smallskip}{\smallskip Thesis: \textit{\@thesis}\medskip}
 
