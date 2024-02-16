@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from glob import glob
-from typing import Any, Dict, Iterable, List
+import os.path
+from typing import Any, Dict, Iterable, List, Tuple
 
 import yaml
 
@@ -16,12 +17,13 @@ class Config:
     include: List[str]
 
     @property
-    def entities(self: "Config") -> Iterable[Dict[str, Any]]:
+    def entities(self: "Config") -> Iterable[Tuple[str, Dict[str, Any]]]:
         for include in self.include:
             for filename in glob(include, recursive=True):
+                id = os.path.splitext(os.path.basename(filename))[0]
                 with open(filename, "r") as f:
                     data = yaml.load(f, Loader=Loader)
-                yield data
+                yield (id, data)
 
 
 def main():

@@ -1,12 +1,7 @@
 from dataclasses import dataclass
-from typing import Any, Dict, Iterable, List, Type
+from typing import Any, Dict, Iterable, Tuple, Type
 
 import yaml
-
-try:
-    from yaml import CDumper as Dumper
-except ImportError:
-    from yaml import Dumper
 
 from resume.award import Award
 from resume.education import Education
@@ -34,9 +29,13 @@ class LoadError(ResumeError):
     def __init__(self, data: Dict[str, Any], exc: Exception):
         super(LoadError, self).__init__(
             f"""Error loading entity: {str(exc)}:
-{yaml.safe_dump(data, Dumper=Dumper)}
+{yaml.safe_dump(data)}
 """
         )
+
+
+Id = str
+Data = Dict[str, Any]
 
 
 @dataclass
@@ -46,20 +45,20 @@ class Resume:
     phone: str
     email: str
     webpage: str
-    awards: List[Award]
-    education: List[Education]
-    jobs: List[Job]
-    projects: List[Project]
-    service: List[Service]
-    skillsets: List[Skillset]
+    awards: Dict[str, Award]
+    education: Dict[str, Education]
+    jobs: Dict[str, Job]
+    projects: Dict[str, Project]
+    service: Dict[str, Service]
+    skillsets: Dict[str, Skillset]
 
     @classmethod
-    def load(cls: Type["Resume"], raw: Iterable[Dict[str, Any]]) -> "Resume":
+    def load(cls: Type["Resume"], raw: Iterable[Tuple[Id, Data]]) -> "Resume":
         kwargs: Dict[str, Any] = dict(
-            awards=[], education=[], jobs=[], projects=[], service=[], skillsets=[]
+            awards={}, education={}, jobs={}, projects={}, service={}, skillsets={}
         )
 
-        for entity in raw:
+        for id, entity in raw:
             for key in entity.keys():
                 if key in WHOAMI_FIELDS:
                     kwargs[key] = entity[key]
@@ -67,7 +66,7 @@ class Resume:
                     l, k = LOADERS[key]
                     try:
                         d = l(entity[key])
-                        kwargs[k].append(d)
+                        kwargs[k][id] = d
                     except Exception as exc:
                         raise LoadError(entity[key], exc) from exc
 
