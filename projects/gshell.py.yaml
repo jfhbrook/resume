@@ -1,7 +1,7 @@
-\begin{project}
-  \projectname{gshell.py}
-  \projecturl{https://github.com/jfhbrook/gshell.py}
-  \stars{1}
-  \dates[June 2019]{Present}
-  \begin{projectdescription}A port of GLib's gshell library to Python\end{projectdescription}
-\end{project}
+---
+project:
+  name: gshell.py
+  url: https://github.com/jfhbrook/public-gpl/tree/main/gshell.py
+  dates:
+    to: June 2019
+  description: A port of GLib's gshell library to Python

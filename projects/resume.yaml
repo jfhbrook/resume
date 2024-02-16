@@ -1,9 +1,8 @@
-\begin{project}
-  \projectname{resume}
-  \projecturl{https://github.com/jfhbrook/resume}
-  \dates[2011]{Current}
-
-  \begin{projectdescription}
-    My resume, written in \LaTeX\hspace{1pt} and featuring a custom class and \LaTeX\hspace{1pt} DSL
-  \end{projectdescription}
-\end{project}
+---
+project:
+  name: resume
+  url: https://github.com/jfhbrook/resume
+  dates:
+    from: 2011
+    to: Current
+  description: My resume, generated from a modular configuration

@@ -1,21 +1,19 @@
-\begin{job}
-  \employer{Procore Technologies}
-  \offices{Remote}
-  \jobtitle{Staff Software Engineer}
-  \team{Embedded Site Reliability Engineering}
-  \dates[August 2022]{January 2024}
-  
-  \begin{accomplishments}
-    \item Led embedded engagements to accomplish infrastructure milestones
-    \item Became a subject matter expert and evangelist for SLOs, educating my team and driving SLO adoption
-    \item Collaborated and drove consensus among technical leaders
-    \item Led development on an ETL framework for operational insights in TypeScript, enabling SREs to easily collect data
-  \end{accomplishments}
-
-  \begin{extendedaccomplishments}
-    \item Developed a circuit breaker to disable file uploads when NFS was unavailable, virtually eliminating a failure mode that could cause a full outage
-    \item Mentored and trained team members through one-on-one meetings and office hours
-    \item Acted as first-line on-call for the core application
-    \item Offered operational support for Terraform
-  \end{extendedaccomplishments}
-\end{job}
+---
+job:
+  employer: Procore Technologies
+  offices: Remote
+  title: Staff Software Engineer
+  team: Embedded Site Reliability Engineering
+  dates:
+    from: August 2022
+    to: January 2024
+  accomplishments:
+    - Led embedded engagements to accomplish infrastructure milestones
+    - Became a subject matter expert and evangelist for SLOs, educating my team and driving SLO adoption
+    - Collaborated and drove consensus among technical leaders
+    - Led development on an ETL framework for operational insights in TypeScript, enabling SREs to easily collect data
+  extended_accomplishments:
+    - Developed a circuit breaker to disable file uploads when NFS was unavailable, virtually eliminating a failure mode that could cause a full outage
+    - Mentored and trained team members through one-on-one meetings and office hours
+    - Acted as first-line on-call for the core application
+    - Offered operational support for Terraform

@@ -1,7 +1,9 @@
-\begin{skillset}{Operating Systems}
-  \item Ubuntu Linux
-  \item Fedora Linux
-  \item Raspberry Pi OS
-  \item MacOS
-  \item Windows
-\end{skillset}
+---
+skillset:
+  name: Operating Systems
+  skills:
+    - Ubuntu Linux
+    - Fedora Linux
+    - Raspberry Pi OS
+    - MacOS
+    - Windows

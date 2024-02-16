@@ -1,11 +1,11 @@
-\begin{project}
-  \projectname{pyee}
-  \projecturl{https://github.com/jfhbrook/pyee}
-  \dates[July 2011]{Current}
-  \stars{211}
-
-  \begin{projectdescription}
+---
+project:
+  name: pyee
+  url: https://github.com/jfhbrook/pyee
+  dates:
+    from: July 2011
+    to: Current
+  stars: 211
+  description: |
     A Python port of the Node.js EventEmitter with special support for
     concurrency and async frameworks
-  \end{projectdescription}
-\end{project}

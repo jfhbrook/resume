@@ -1,15 +1,14 @@
-\begin{job}
-  \employer{Aramark-Harrison Lodging}
-  \offices{Denali National Park AK}
-  \jobtitle{Porter}
-  \dates[May 2006]{August 2006}
-
-  \begin{accomplishments}
-    \item Stocked carts with linen, tarry and supplies for housekeepers
-    \item Cleaned and maintained public areas, including bathrooms
-  \end{accomplishments}
-  \begin{extendedaccomplishments}
-    \item Prepared rooms for guest arrival
-    \item Handled individual guest requests
-  \end{extendedaccomplishments}
-\end{job}
+---
+job:
+  employer: Aramark-Harrison Lodging
+  offices: Denali National Park AK
+  title: Porter
+  dates:
+    from: May 2006
+    to: August 2006
+  accomplishments:
+    - Stocked carts with linen, tarry and supplies for housekeepers
+    - Cleaned and maintained public areas, including bathrooms
+  extended_accomplishments:
+    - Prepared rooms for guest arrival
+    - Handled individual guest requests

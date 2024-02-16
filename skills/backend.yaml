@@ -1,8 +1,10 @@
-\begin{skillset}{Backend Engineering}
-  \item NGINX
-  \item Flask
-  \item Node.js
-  \item Redis
-  \item asyncio
-  \item Twisted
-\end{skillset}
+---
+skillset:
+  name: Backend Engineering
+  skills:
+    - NGINX
+    - Flask
+    - Node.js
+    - Redis
+    - asyncio
+    - Twisted

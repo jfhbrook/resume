@@ -1,9 +1,9 @@
-\begin{project}
-  \projectname{PSeudo}
-  \projecturl{https://github.com/jfhbrook/public/tree/main/attic/PSeudo}
-  \dates{April 2020}
-
-  \begin{projectdescription}
-    A PowerShell module for privilege escalation using named pipes and .NET binary serialization
-  \end{projectdescription}
-\end{project}
+---
+project:
+  name: PSeudo
+  url: https://github.com/jfhbrook/public/tree/main/attic/PSeudo
+  dates:
+    to: April 2020
+  description: |
+    A PowerShell module for privilege escalation using named pipes and .NET
+    binary serialization

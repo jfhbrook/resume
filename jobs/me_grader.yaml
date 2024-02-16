@@ -1,11 +1,10 @@
-\begin{job}
-  \employer{UAF Mechanical Engineering Department}
-  \offices{Fairbanks AK}
-  \jobtitle{Homework Grader}
-  \dates[September 2008]{December 2008}
-
-  \begin{accomplishments}
-    \item Graded and corrected homework assignments for ES 331, Mechanics of
-    Materials
-  \end{accomplishments}
-\end{job}
+---
+job:
+  employer: UAF Mechanical Engineering Department
+  offices: Fairbanks AK
+  title: Homework Grader
+  dates:
+    from: September 2008
+    to: December 2008
+  accomplishments:
+    - Graded and corrected homework assignments for ES 331, Mechanics of Materials

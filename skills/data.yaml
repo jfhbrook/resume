@@ -1,11 +1,13 @@
-\begin{skillset}{Data Engineering \& Data Science}
-  \item Airflow
-  \item Spark
-  \item Jupyter
-  \item LookML
-  \item Kafka
-  \item Pandas
-  \item Data Warehousing
-  \item \\Numerical Methods
-  \item Optimization
-\end{skillset}
+---
+skillset:
+  name: Data Engineering & Data Science
+  skills:
+    - Airflow
+    - Spark
+    - Jupyter
+    - LookML
+    - Kafka
+    - Pandas
+    - Data Warehousing
+    - Numerical Methods
+    - Optimization

@@ -1,9 +1,9 @@
-\begin{project}
-  \projectname{Counting of Stream Crossings Along a Path Between Two Given Alaskan Villages}
-  \dates[March 2010]{May 2010}
-
-  \begin{projectdescription}
+---
+project:
+  name: Counting of Stream Crossings Along a Path Between Two Given Alaskan Villages
+  dates:
+    from: March 2010
+    to: May 2010
+  description: |
     A feasibility study for laying unburied fiber optic cable over tunda in
     remote regions of Alaska using Python, qgis and ESRI shapefiles
-  \end{projectdescription}
-\end{project}

@@ -1,11 +1,13 @@
-\begin{skillset}{Databases}
-  \item PostgreSQL
-  \item MySQL
-  \item SQL Server
-  \item BigQuery
-  \item RedShift
-  \item Vertica
-  \item SQLite
-  \item CouchDB
-  \item MongoDB
-\end{skillset}
+---
+skillset:
+  name: Databases
+  skills:
+    - PostgreSQL
+    - MySQL
+    - SQL Server
+    - BigQuery
+    - RedShift
+    - Vertica
+    - SQLite
+    - CouchDB
+    - MongoDB

@@ -1,14 +1,13 @@
-\begin{job}
-  \employer{UAF Mechanical Engineering Department}
-  \offices{Fairbanks AK}
-  \jobtitle{Teaching Assistant}
-  \dates[September 2010]{May 2011}
-
-  \begin{accomplishments}
-    \item Graded homework and designed quizzes for ES 346, Basic Thermodynamics
-    \item Graded homework for ME/ENVE 456/658, Energy and the Environment
-    \item Graded homework for ME 403, Machine Design
-    \item Redesigned and condusted laboratory experiments for ME 415, Thermal
-    Systems Lab
-  \end{accomplishments}
-\end{job}
+---
+job:
+  employer: UAF Mechanical Engineering Department
+  offices: Fairbanks AK
+  title: Teaching Assistant
+  dates:
+    from: September 2010
+    to: May 2011
+  accomplishments:
+    - Graded homework and designed quizzes for ES 346, Basic Thermodynamics
+    - Graded homework for ME/ENVE 456/658, Energy and the Environment
+    - Graded homework for ME 403, Machine Design
+    - Redesigned and condusted laboratory experiments for ME 415, Thermal Systems Lab

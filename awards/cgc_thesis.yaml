@@ -1,7 +1,7 @@
-\begin{award}
-  \awardname{Center for Global Change Student Research Grant}
-  \dates{May 2010}
-  \projectname{Determining Anisotropic Thermal Conductivity of Snow with Needle
-    Probe Measurements}
-  \awardamount{\$8200}
-\end{award}
+---
+award:
+  name: Center for Global Change Student Research Grant
+  dates:
+    from: May 2010
+  project: Determining Anisotropic Thermal Conductivity of Snow with Needle Probe Measurements
+  amount: $8200

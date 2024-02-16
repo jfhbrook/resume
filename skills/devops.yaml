@@ -1,15 +1,17 @@
-\begin{skillset}{DevOps}
-  \item Ansible
-  \item Terraform
-  \item DataDog
-  \item NewRelic
-  \item OpenTelemetry
-  \item Prometheus
-  \item Docker
-  \item GitLab CI
-  \item CircleCI
-  \item \\Kubernetes
-  \item systemd
-  \item Vagrant
-  \item SLOs
-\end{skillset}
+---
+skillset:
+  name: DevOps
+  skills:
+    - Ansible
+    - Terraform
+    - DataDog
+    - NewRelic
+    - OpenTelemetry
+    - Prometheus
+    - Docker
+    - GitLab CI
+    - CircleCI
+    - Kubernetes
+    - systemd
+    - Vagrant
+    - SLOs

@@ -1,12 +1,9 @@
-\begin{project}
-  \projectname{korben-twitter}
-  \projecturl{https://twitter.com/korbenisabird}
-  \stars{2}
-  \dates[January 2014]{August 2019}
-
-  \begin{projectdescription}
-  A Twitter bot that uses markov chains to make funny tweets as my pet parakeet,
-  originally written in Node.js but now using Bash and SQLite and running on
-  Windows using the WSL
-  \end{projectdescription}
-\end{project}
+---
+project:
+  name: korben-twitter
+  url: https://twitter.com/korbenisabird
+  stars: 2
+  dates:
+    from: January 2014
+    to: August 2019
+  description: A Twitter bot that uses markov chains to make funny tweets as my pet parakeet

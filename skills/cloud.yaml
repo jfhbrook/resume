@@ -1,5 +1,7 @@
-\begin{skillset}{Cloud Platforms}
-  \item AWS
-  \item GCP
-  \item DigitalOcean
-\end{skillset}
+---
+skillset:
+  name: Cloud Platforms
+  skills:
+    - AWS
+    - GCP
+    - DigitalOcean

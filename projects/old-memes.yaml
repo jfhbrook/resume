@@ -1,10 +1,10 @@
-\begin{project}
-  \projectname{old memes}
-  \projecturl{https://github.com/jfhbrook/public/tree/main/old-memes}
-  \dates[July 2011]{Current}
-
-  \begin{projectdescription}
+---
+project:
+  name: old memes
+  url: https://github.com/jfhbrook/public/tree/main/old-memes
+  dates:
+    from: July 2011
+    to: Current
+  description: |
     An old school Node.js anti-framework, built around classic era Node.js
-      modules, developed as a labor of love over the last decade
-  \end{projectdescription}
-\end{project}
+    modules, developed as a labor of love over the last decade

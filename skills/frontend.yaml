@@ -1,8 +1,10 @@
-\begin{skillset}{Frontend Engineering}
-  \item CSS
-  \item HTML
-  \item Django
-  \item Express
-  \item React
-  \item Electron
-\end{skillset}
+---
+skillset:
+  name: Frontend Engineering
+  skills:
+    - CSS
+    - HTML
+    - Django
+    - Express
+    - React
+    - Electron

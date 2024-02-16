@@ -1,10 +1,9 @@
-\begin{project}
-  \projectname{twisted\_ipython}
-  \projecturl{https://github.com/jfhbrook/public/tree/main/twisted_ipython}
-  \dates{June 2019}
-
-  \begin{projectdescription}
+---
+project:
+  name: "twisted_ipython"
+  url: https://github.com/jfhbrook/public/tree/main/twisted_ipython
+  dates:
+    to: June 2019
+  description: |
     An IPython extension using Crochet that enables Twisted autoawait support in
     IPython and Jupyter notebooks
-  \end{projectdescription}
-\end{project}

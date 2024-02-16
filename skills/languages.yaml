@@ -1,10 +1,12 @@
-\begin{skillset}{Languages}
-  \item Bash
-  \item JavaScript
-  \item TypeScript
-  \item PowerShell
-  \item Python
-  \item Scala
-  \item Rust
-  \item Go
-\end{skillset}
+---
+skillset:
+  name: Languages
+  skills:
+    - Bash
+    - JavaScript
+    - TypeScript
+    - PowerShell
+    - Python
+    - Scala
+    - Rust
+    - Go

@@ -1,19 +1,14 @@
-\begin{job}
-  \employer{Eaze}
-  \offices{Remote}
-  \jobtitle{Staff Engineer}
-  \team{Core Services}
-  \dates[October 2021]{August 2022}
-  
-  \begin{accomplishments}
-    \item Added OpenTelemetry support to the boltzmann framework, preparing boltzmann
-      services for migration from Honeycomb beelines
-  \end{accomplishments}
-
-  \begin{extendedaccomplishments}
-    \item Developed a migration toolchain and pipeline for SQL Server,
-      improving safety and speed of .NET development
-    \item Made recommendations for hiring decisions and process changes, many
-      of which management adopted
-  \end{extendedaccomplishments}
-\end{job}
+---
+job:
+  employer: Eaze
+  offices: Remote
+  title: Staff Engineer
+  team: Core Services
+  dates:
+    from: October 2021
+    to: August 2022
+  accomplishments:
+    - Added OpenTelemetry support to the boltzmann framework, preparing boltzmann services for migration from Honeycomb beelines
+  extended_accomplishments:
+    - Developed a migration toolchain and pipeline for SQL Server, improving safety and speed of .NET development
+    - Made recommendations for hiring decisions and process changes, many of which management adopted

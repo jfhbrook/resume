@@ -1,6 +1,7 @@
-\begin{education}
-  \institution{Susitna Valley Jr/Sr High School}
-  \degree{High School Diploma}
-  \dates{May 2010}
-  \gpa{3.73}
-\end{education}
+---
+education:
+  institution: Susitna Valley Jr/Sr High School
+  degree: High School Diploma
+  dates:
+    to: May 2010
+  gpa: 3.73

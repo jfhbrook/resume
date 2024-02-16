@@ -1,17 +1,14 @@
-\begin{job}
-  \employer{Nodejitsu Inc}
-  \offices{San Francisco CA}
-  \jobtitle{Head of Support}
-  \dates[July 2011]{December 2012}
-
-  \begin{extendedaccomplishments}
-    \item Managed and trained other support engineers
-    \item Monitored support channels such as IRC, email and Twitter for support
-    requests
-    \item Triaged and investigated live production issues with Nodejitsu software,
-    servers and cloud providers
-    \item Maintained, fixed bugs and made releases of modules in the Flatiron
-    framework and Nodejitsu's open source software
-    \item Developed and maintained internal support infrastructure and tooling
-  \end{extendedaccomplishments}
-\end{job}
+---
+job:
+  employer: Nodejitsu Inc
+  offices: San Francisco CA
+  title: Head of Support
+  dates:
+    from: July 2011
+    to: December 2012
+  extended_accomplishments:
+    - Managed and trained other support engineers
+    - Monitored support channels such as IRC, email and Twitter for support requests
+    - Triaged and investigated live production issues with Nodejitsu software, servers and cloud providers
+    - Maintained, fixed bugs and made releases of modules in the Flatiron framework and Nodejitsu's open source software
+    - Developed and maintained internal support infrastructure and tooling

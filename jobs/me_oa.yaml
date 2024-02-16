@@ -1,12 +1,11 @@
-\begin{job}
-  \employer{UAF Mechanical Engineering Department}
-  \offices{Fairbanks AK}
-  \jobtitle{Office Assistant}
-  \dates[January 2008]{December 2009}
-
-  \begin{accomplishments}
-    \item Tracked purchase information on UAF's Oracle database and compiled it into a human-readable form
-    \item Facilitated communication between students, faculty and system
-    administration
-  \end{accomplishments}
-\end{job}
+---
+job:
+  employer: UAF Mechanical Engineering Department
+  offices: Fairbanks AK
+  title: Office Assistant
+  dates:
+    from: January 2008
+    to: December 2009
+  accomplishments:
+    - Tracked purchase information on UAF's Oracle database and compiled it into a human-readable form
+    - Facilitated communication between students, faculty and system administration

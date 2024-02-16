@@ -1,6 +1,8 @@
-\begin{skillset}{Document Languages}
-  \item LaTeX
-  \item Markdown
-  \item Org
-  \item ReStructuredText
-\end{skillet}
+---
+skillset:
+  name: Document Languages
+  skills:
+    - LaTeX
+    - Markdown
+    - Org
+    - ReStructuredText

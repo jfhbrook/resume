@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resume"
+version = "1.0.0"
+authors = [
+  {name = "Josh Holbrook", email = "josh.holbrook@gmail.com"}
+]
+description = "My resume"
+readme = "README.md"
+keywords = []
+license = { text = "MIT" }
+dependencies = [
+  "Jinja2",
+  "pyyaml"
+]
+
+[project.optional-dependencies]
+dev = [
+  "flake8",
+  "flake8-black",
+  "pytest",
+  "black",
+  "isort",
+  "jupyter-console",
+  "validate-pyproject[all]"
+]
+
+[tool.isort]
+profile = "appnexus"
+known_application = "resume"
+
+[tool.pyright]
+include = ["resume", "tests"]
+
+[tool.pytest]
+addopts = "--verbose -s"
+testpaths = [ "tests" ]
+
+[tool.setuptools]
+packages = [ "resume" ]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+optional-dependencies.dev = { file = ["requirements_dev.txt"] }

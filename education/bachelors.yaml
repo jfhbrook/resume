@@ -1,9 +1,12 @@
-\begin{education}
-  \institution{University of Alaska Fairbanks}
-  \degree{Bachelor of Science}
-  \honor{Cum Laude}
-  \major{Mechanical Engineering}
-  \minor{Mathematics}
-  \dates[August 2005]{May 2010}
-  \gpa{3.67}
-\end{education}
+---
+education:
+  institution: University of Alaska Fairbanks
+  degree: Bachelor of Science
+  honor: Cum Laude
+  major: Mechanical Engineering
+  minor: Mathematics
+  dates:
+    from: August 2005
+    to: May 2010
+
+  gpa: 3.67

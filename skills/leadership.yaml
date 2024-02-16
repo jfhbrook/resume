@@ -1,5 +1,7 @@
-\begin{skillset}{Leadership}
-  \item Consensus Building
-  \item Decision-Making
-  \item Mentorship
-\end{skillset}
+---
+skillset:
+  name: Leadership
+  skills:
+    - Consensus Building
+    - Decision-Making
+    - Mentorship

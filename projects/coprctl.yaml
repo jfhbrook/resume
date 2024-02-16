@@ -1,9 +1,8 @@
-\begin{project}
-  \projectname{coprctl}
-  \projecturl{https://github.com/jfhbrook/public/tree/main/coprctl}
-  \dates{June 2023}
-
-  \begin{projectdescription}
+---
+project:
+  name: coprctl
+  url: https://github.com/jfhbrook/public/tree/main/coprctl
+  dates:
+    to: June 2023
+  description: |
     A wrapper around copr-cli that affords a Kubernetes-inspired IaC interface for COPR
-  \end{projectdescription}
-\end{project}

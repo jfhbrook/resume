@@ -1,11 +1,11 @@
-\begin{project}
-  \projectname{korbenware}
-  \projecturl{https://github.com/jfhbrook/public/tree/main/korbenware}
-  \dates[April 2019]{June 2023}
-
-  \begin{projectdescription}
+---
+project:
+  name: korbenware
+  url: https://github.com/jfhbrook/public/tree/main/korbenware
+  dates:
+    from: April 2019
+    to: June 2023
+  description: |
     A Linux desktop management suite using Python and Bash, which includes an
     implementation of XDG autostart, an application launcher, and an
     XDG menu TUI
-  \end{projectdescription}
-\end{project}

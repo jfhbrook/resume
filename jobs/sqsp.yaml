@@ -1,18 +1,13 @@
-\begin{job}
-  \employer{Squarespace Inc}
-  \offices{New York NY}
-  \jobtitle{Senior Software Engineer}
-  \team{Finance Products}
-  \dates[July 2019]{January 2020}
-
-  \begin{extendedaccomplishments}
-    \item Supported and maintained financial data pipelines used for ASC606
-    revenue recognition, cash and tax reporting and financial planning for a
-    multi billion dollar web site host
-    \item Spearheaded proposals to onboard billing and payments data onto a data
-    vault reference architecture to improve velocity and decrease bugs, and to
-    rearchitect reporting to mirror industry standard BI tools
-    \item Designed and instituted an on-call process to ensure that
-    support work was spread evenly
-  \end{extendedaccomplishments}
-\end{job}
+---
+job:
+  employer: Squarespace Inc
+  offices: New York NY
+  title: Senior Software Engineer
+  team: Finance Products
+  dates:
+    from: July 2019
+    to: January 2020
+  extended_accomplishments:
+    - Supported and maintained financial data pipelines used for ASC606 revenue recognition, cash and tax reporting and financial planning for a multi billion dollar web site host
+    - Spearheaded proposals to onboard billing and payments data onto a data vault reference architecture to improve velocity and decrease bugs, and to rearchitect reporting to mirror industry standard BI tools
+    - Designed and instituted an on-call process to ensure that support work was spread evenly

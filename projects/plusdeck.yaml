@@ -1,9 +1,10 @@
-\begin{project}
-  \projectname{plusdeck}
-  \projecturl{https://github.com/jfhbrook/plusdeck}
-  \dates[October 2023]{Current}
-
-  \begin{projectdescription}
-    Reverse engineered protocol documentation and tools for the Plus Deck 2C PC Cassette Deck
-  \end{projectdescription}
-\end{project}
+---
+project:
+  name: plusdeck
+  url: https://github.com/jfhbrook/plusdeck
+  dates:
+    from: October 2023
+    to: Current
+  description: |
+    Reverse engineered protocol documentation and Python drivers for the Plus
+    Deck 2C PC Cassette Deck

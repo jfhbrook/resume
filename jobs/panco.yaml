@@ -1,15 +1,12 @@
-\begin{job}
-  \employer{Panco Construction}
-  \offices{Talkeetna AK}
-  \jobtitle{Construction Laborer}
-  \dates[May 2007]{June 2007}
-
-  \begin{accomplishments}
-    \item Stocked, staged and assisted in the install of solid surface
-    countertops, shower enclosures and windowsills
-  \end{accomplishments}
-  \begin{extendedaccomplishments}
-    \item Sanded, polished and assisted in the fabrication of solid surface
-    countertops, shower enclosures and windowsills
-  \end{extendedaccomplishments}
-\end{job}
+---
+job:
+  employer: Panco Construction
+  offices: Talkeetna AK
+  title: Construction Laborer
+  dates:
+    from: May 2007
+    to: June 2007
+  accomplishments:
+    - Stocked, staged and assisted in the install of countertops, shower enclosures and windowsills
+  extended_accomplishments:
+    - Sanded, polished and assisted in the fabrication of solid surface countertops, shower enclosures and windowsills

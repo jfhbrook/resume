@@ -1,9 +1,7 @@
-\begin{project}
-  \projectname{omsxctl}
-  \projecturl{https://github.com/jfhbrook/public/tree/main/omsxctl}
-  \dates{August 2022}
-
-  \begin{projectdescription}
-    A CLI tool for controlling the openMSX emulator over its socket API
-  \end{projectdescription}
-\end{project}
+---
+project:
+  name: omsxctl
+  url: https://github.com/jfhbrook/public/tree/main/omsxctl
+  dates:
+    from: August 2022
+  description: A CLI tool for controlling the openMSX emulator over its socket API

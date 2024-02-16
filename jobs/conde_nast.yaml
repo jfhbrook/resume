@@ -1,19 +1,13 @@
-\begin{job}
-  \employer{Cond\'{e} Nast}
-  \offices{New York NY}
-  \jobtitle{Software Developer}
-  \team{Copilot API}
-  \dates[February 2014]{August 2016}
-
-  \begin{accomplishments}
-    \item Worked on the team that launched Vogue Runway's real time fashion show
-    coverage during New York Fashion Week, including leading a data migration
-    that replatformed over a decade of content
-  \end{accomplishments}
-  
-  \begin{extendedaccomplishments}
-    \item Wrote HATEOAS-inspired graph-capable content relationships
-    API that supported the data modeling needs of over a dozen brands using
-    Cond\'{e} Nast's all-new internal CMS
-  \end{extendedaccomplishments}
-\end{job}
+---
+job:
+  employer: Conde Nast
+  offices: New York NY
+  title: Software Developer
+  team: Copilot API
+  dates:
+    from: February 2014
+    to: August 2016
+  accomplishments:
+    - Worked on the team that launched Vogue Runway's real time fashion show coverage during New York Fashion Week, including leading a data migration that replatformed over a decade of content
+  extended_accomplishments:
+    - Wrote HATEOAS-inspired graph-capable content relationships API that supported the data modeling needs of over a dozen brands using Conde Nast's all-new internal CMS

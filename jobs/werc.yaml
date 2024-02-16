@@ -1,12 +1,11 @@
-\begin{job}
-  \employer{UAF Water and Environmental Research Center}
-  \offices{Fairbanks AK}
-  \jobtitle{Laboratory Assistant}
-  \dates[February 2007]{May 2007}
-
-  \begin{accomplishments}
-    \item Took an inventory of all chemical stock in the laboratory
-    \item Tabulated, manipulated and organized well water test data in Excel to
-    deliver reports to homeowners
-  \end{accomplishments}
-\end{job}
+---
+job:
+  employer: UAF Water and Environmental Research Center
+  offices: Fairbanks AK
+  title: Laboratory Assistant
+  dates:
+    from: February 2007
+    to: May 2007
+  accomplishments:
+    - Took an inventory of all chemical stock in the laboratory
+    - Tabulated, manipulated and organized well water test data in Excel to deliver reports to homeowners
