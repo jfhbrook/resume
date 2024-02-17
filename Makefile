@@ -1,6 +1,6 @@
 .PHONY: all, src
 
-all: resume.pdf cv.pdf
+all: everything.pdf
 
 src: awards/*.tex education/*.tex jobs/*.tex projects/*.tex service/*.tex skills/*.tex whoami.tex
 
@@ -9,6 +9,9 @@ resume.pdf: resume.tex src
 
 cv.pdf: cv.tex src
 	lualatex cv.tex
+
+everything.pdf: everything.tex src
+	lualatex everything.tex
 
 clean: clear
 	rm -f *.pdf
