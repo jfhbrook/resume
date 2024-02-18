@@ -14,10 +14,10 @@ said, there are a scant handful of tasks in the [justfile](https://github.com/ca
 
 ### Create a New Prototypal Entry
 
-First, open `everything.docx`:
+First, open `template.docx`:
 
 ```bash
-open everything.docx
+open template.docx
 ```
 
 Copy and paste an existing entry, and fill in the fields accordingly. Customize
@@ -31,7 +31,7 @@ Next, open `resume.docx`:
 open resume.docx
 ```
 
-Copy and paste the new entry from `everything.docx` into the document, if
+Copy and paste the new entry from `template.docx` into the document, if
 appropriate. Pare down the bullet points to target a general purpose software
 oriented resume.
 
@@ -42,14 +42,14 @@ it than they might be for an industry where jobs require less explanation.
 
 ### Create a Tailored Resume
 
-Tailored resumes may be created by copying either `everything.docx` or
+Tailored resumes may be created by copying either `template.docx` or
 `resume.docx` as a starting point, and editing from there. Most resumes will work
-best by starting with `resume.docx` but referring to `everything.docx` for more
+best by starting with `resume.docx` but referring to `template.docx` for more
 bullet points which may be better-suited for the tailored resume:
 
 ```bash
 just new tailored.docx
-open everything.docx tailored.docx
+open template.docx tailored.docx
 ```
 
 ### Generate PDFs
