@@ -2,10 +2,8 @@
 
 ## Links
 
-* [A one-page resume [Word]](https://github.com/jfhbrook/resume/raw/main/resume.docx)
-* [A one-page resume [PDF]](https://github.com/jfhbrook/resume/raw/main/resume.pdf)
-* [A multi-page extended CV [Word]](https://github.com/jfhbrook/resume/raw/main/cv.docx)
-* [A multi-page extended CV [PDF]](https://github.com/jfhbrook/resume/raw/main/cv.pdf)
+* [Resume [Word]](https://github.com/jfhbrook/resume/raw/main/resume.docx)
+* [Resume [PDF]](https://github.com/jfhbrook/resume/raw/main/resume.pdf)
 * [My LinkedIn](https://www.linkedin.com/in/josh-holbrook-27744965/)
 * [My GitHub](https://github.com/jfhbrook)
 
@@ -27,10 +25,10 @@ the formatting if it makes sense to. Write more bullet points than you would
 reasonably have in a completed resume - you can delete them later. Save the
 document.
 
-Next, open `cv.docx`:
+Next, open `resume.docx`:
 
 ```bash
-open cv.docx
+open resume.docx
 ```
 
 Copy and paste the new entry from `everything.docx` into the document, if
@@ -45,8 +43,8 @@ it than they might be for an industry where jobs require less explanation.
 ### Create a Tailored Resume
 
 Tailored resumes may be created by copying either `everything.docx` or
-`cv.docx` as a starting point, and editing from there. Most resumes will work
-best by starting with `cv.docx` but referring to `everything.docx` for more
+`resume.docx` as a starting point, and editing from there. Most resumes will work
+best by starting with `resume.docx` but referring to `everything.docx` for more
 bullet points which may be better-suited for the tailored resume:
 
 ```bash
@@ -56,8 +54,8 @@ open everything.docx tailored.docx
 
 ### Generate PDFs
 
-For convenience, manually print `cv.docx` (or your tailored resume) to the
-corresponding PDF (ie., `cv.pdf`).
+For convenience, manually print `resume.docx` (or your tailored resume) to the
+corresponding PDF (ie., `resume.pdf`).
 
 ### Cleanup
 
