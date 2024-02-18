@@ -2,45 +2,61 @@
 
 ## Links
 
-* [A one-page resume [PDF]](https://github.com/jfhbrook/resume/raw/main/resume.pdf)
-* [A multi-page extended CV [PDF]](https://github.com/jfhbrook/resume/raw/main/cv.pdf)
+* [Resume [Word]](https://github.com/jfhbrook/resume/raw/main/resume.docx)
+* [Resume [PDF]](https://github.com/jfhbrook/resume/raw/main/resume.pdf)
 * [My LinkedIn](https://www.linkedin.com/in/josh-holbrook-27744965/)
 * [My GitHub](https://github.com/jfhbrook)
 
-## Building My Resume
+## Development
 
-My resume is written in LaTeX and is compiled with luatex. I use Docker to
-build it, since setting up the environment can be challenging *and* takes up
-a lot of space.
+My resume is written in Microsoft Word using a largely manual process. That
+said, there are a scant handful of tasks in the [justfile](https://github.com/casey/just).
 
-### Prerequisites
+### Create a New Prototypal Entry
 
-- [just](https://github.com/casey/just)
-  - with cargo: `cargo install just`
-- [watchexec](https://github.com/watchexec/watchexec)
-  - with cargo: `rustup run nightly cargo install watchexec-cli`
-- [Docker](https://www.docker.com/products/docker-desktop/)
-- A PDF viewer - this will be OS dependent
+First, open `template.docx`:
 
-### Setup
+```bash
+open template.docx
+```
 
-To build the Docker image, run `just build`.
+Copy and paste an existing entry, and fill in the fields accordingly. Customize
+the formatting if it makes sense to. Write more bullet points than you would
+reasonably have in a completed resume - you can delete them later. Save the
+document.
 
-### Development
+Next, open `resume.docx`:
 
-1. Run `just watch` to get Docker to watch all `.tex` files and run the build on
-   save.
-2. Open `resume.pdf` and `cv.pdf`. Many PDF viewers in Linux and MacOS will
-   automatically refresh whenever the file changes. Unfortunately, this is
-   not as common in Windows.
-3. When you're done, commit and push.
-   
-### Build Individual PDFs
+```bash
+open resume.docx
+```
 
-- `just make resume.pdf` - Build the one-page resume
-- `just make cv.pdf` - Build the extended CV
+Copy and paste the new entry from `template.docx` into the document, if
+appropriate. Pare down the bullet points to target a general purpose software
+oriented resume.
+
+The resulting document can be up to two pages long. After consulting with
+career counseling experts, I've decided that it's not viable to fully
+represent my experience on a one-pager and that employers are less picky about
+it than they might be for an industry where jobs require less explanation.
+
+### Create a Tailored Resume
+
+Tailored resumes may be created by copying either `template.docx` or
+`resume.docx` as a starting point, and editing from there. Most resumes will work
+best by starting with `resume.docx` but referring to `template.docx` for more
+bullet points which may be better-suited for the tailored resume:
+
+```bash
+just new tailored.docx
+open template.docx tailored.docx
+```
+
+### Generate PDFs
+
+For convenience, manually print `resume.docx` (or your tailored resume) to the
+corresponding PDF (ie., `resume.pdf`).
 
 ### Cleanup
 
-Running `just clean` should, in theory, delete the Docker image and prune
-layers.
+Running `just clean` should clean up temporary files created by Microsoft Word.
