@@ -7,3 +7,4 @@
 *.out
 *.project
 *.service
+~$*.docx
